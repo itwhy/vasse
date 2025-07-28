@@ -91,7 +91,7 @@ export default function Header() {
                     className={`text-lg ${
                       pathname === link.href
                         ? 'text-accent'
-                        : 'text-gray-500 hover:text-primary'
+                        : 'text-gray-500'
                     }`}
                   >
                     {link.label}
