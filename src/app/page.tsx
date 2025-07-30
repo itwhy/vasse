@@ -1,5 +1,5 @@
 import AnimatedSection from '@/components/AnimatedSection';
-
+import Hero from '@/components/Hero';
 export const metadata = {
   title: 'Accueil – Benoît Vasse',
   description: 'Préparateur mental diplômé et coach certifié. Découvrez mon approche et mon parcours.',
@@ -7,6 +7,8 @@ export const metadata = {
 
 export default function HomePage() {
   return (
+    <>
+    <Hero />
     <AnimatedSection>
       <section className="text-center py-20">
         <h1 className="text-4xl font-bold text-primary mb-6">
@@ -18,5 +20,6 @@ export default function HomePage() {
         </p>
       </section>
     </AnimatedSection>
+    </>
   );
 }

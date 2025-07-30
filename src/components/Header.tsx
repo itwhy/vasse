@@ -19,9 +19,9 @@ import { Menu } from 'lucide-react';
 import { useState } from 'react';
 
 const navLinks = [
-  { href: '/', label: 'Accueil' },
-  { href: '/approche', label: 'Approche' },
-  { href: '/parcours', label: 'Parcours' },
+  { href: '/preparation-mentale', label: 'La préparation mentale' },
+  { href: '/approche', label: 'Mon approche' },
+  { href: '/a-propos-de-moi', label: 'A propos de moi' },
 ];
 
 export default function Header() {
@@ -29,10 +29,10 @@ export default function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="bg-white text-gray-500 shadow p-4">
+    <header className="text-gray-500 p-4">
       <div className="container mx-auto flex justify-between items-center">
         {/* Logo */}
-        <Link href="/" className="text-xl font-light text-gray-700">
+        <Link href="/" className=" font-serif text-xl text-gray-700">
           Benoît Vasse
         </Link>
 
@@ -45,7 +45,7 @@ export default function Header() {
                   <NavigationMenuLink asChild>
                     <Link
                       href={link.href}
-                      className={`px-3 py-2 text-sm transition-colors ${
+                      className={`px-3 py-2 transition-colors ${
                         pathname === link.href
                           ? 'text-accent'
                           : 'hover:text-primary'
