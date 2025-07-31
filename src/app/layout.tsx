@@ -37,7 +37,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="fr">
       <SpeedInsights/>
-      <body suppressHydrationWarning className={`${notoSans.variable} ${notoSerif.variable} flex flex-col min-h-screen bg-soft`}>
+      <body suppressHydrationWarning className={`${notoSans.variable} ${notoSerif.variable} flex flex-col min-h-screen bg-background`}>
         <Header />
         <main className="flex-1 container mx-auto px-4">{children}</main>
         <Footer />

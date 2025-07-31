@@ -10,6 +10,7 @@ const config: Config = {
       colors: {
         primary: "#1C2A40",
         accent: "#FF0000",
+        navi: "#344A5F",
         soft: "#F5F6FA",
         nature: "#789262",
       },
