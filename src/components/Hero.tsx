@@ -32,7 +32,7 @@ export default function Hero() {
         </p>
 
         {/* Liens menu */}
-<div className="flex flex-wrap gap-4 mb-8 text-base font-serif font-bold italic text-gray-700">
+<div className="flex flex-wrap gap-4 mb-8 font-bold">
   <p>
           Découvrez : 
         </p>
@@ -40,7 +40,7 @@ export default function Hero() {
     <Link
       key={link.href}
       href={link.href}
-      className="underline underline-offset-2 hover:text-primary transition rouge"
+      className=" font-serif italic underline underline-offset-2 hover:text-primary transition rouge font-semibold"
     >
       {link.label}
     </Link>
