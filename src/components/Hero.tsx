@@ -13,7 +13,7 @@ export default function Hero() {
       {/* Image côté gauche */}
       <div className="relative w-full md:w-1/3 h-80 md:h-[500px] rounded-xl shadow-lg overflow-hidden">
         <Image
-          src="/images/benoit.jpg"
+          src="/images/benoit-2.jpg"
           alt="Benoît Vasse"
           fill
           sizes="(max-width: 768px) 100vw, 33vw"
