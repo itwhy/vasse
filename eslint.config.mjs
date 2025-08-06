@@ -14,6 +14,8 @@ const eslintConfig = [
   {
     rules: {
       "@typescript-eslint/no-explicit-any": "off", // Désactive la règle qui bloque les `any`
+      "react/no-unescaped-entities": "off",
+
     },
   },
 ];

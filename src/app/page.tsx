@@ -1,4 +1,3 @@
-{/* eslint-disable-next-line react/no-unescaped-entities */}
 
 import AnimatedSection from '@/components/AnimatedSection';
 import Hero from '@/components/Hero';
