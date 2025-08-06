@@ -28,8 +28,8 @@ export default async function HomePage() {
       <AnimatedSection>
         <section className="container mx-auto py-20 px-8 rounded-xl bg-[#1F344F]">
           <p className="font-serif italic text-center text-2xl jaune">
-"Chaque rendez-vous apportait quelque chose de nouveau,<br/>ce qui permettait
-une vraie progression."</p>
+  {'"Chaque rendez-vous apportait quelque chose de nouveau, ce qui permettait une vraie progression."'}
+</p>
 <p className="text-center text-gray-200 mb-12">Sarah Toulemonde – Cavalière saut d’obstacle</p>
           <h2 className="text-4xl font-serif font-bold jaune text-center mb-8">
             Ils m’ont fait confiance
