@@ -14,11 +14,11 @@ interface Temoin {
   photo: string;
 }
 
-export default async function SingleTemoignage({
-  params,
-}: {
-  params: { slug: string };
-}) {
+export default async function SingleTemoignage(
+  props: { params: { slug: string } } // <-- on tape ici directement
+) {
+  const { params } = props;
+
   const filePath = path.join(process.cwd(), 'data', 'temoignages.json');
   const fileContents = await fs.readFile(filePath, 'utf-8');
   const temoignages: Temoin[] = JSON.parse(fileContents);
