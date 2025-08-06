@@ -3,8 +3,6 @@ import { promises as fs } from 'fs';
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import BreadcrumbSelect from '@/components/BreadcrumbSelect';
-import type { PageProps } from 'next';
-
 
 interface Temoin {
   slug: string;
@@ -18,7 +16,9 @@ interface Temoin {
 
 export default async function SingleTemoignage({
   params,
-}: PageProps<{ slug: string }>) {
+}: {
+  params: { slug: string };
+}) {
   const filePath = path.join(process.cwd(), 'data', 'temoignages.json');
   const fileContents = await fs.readFile(filePath, 'utf-8');
   const temoignages: Temoin[] = JSON.parse(fileContents);
