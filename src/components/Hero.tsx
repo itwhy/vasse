@@ -13,7 +13,7 @@ export default function Hero() {
       {/* Image côté gauche */}
       <div className="relative w-full md:w-1/3 h-80 md:h-[500px] rounded-xl shadow-lg overflow-hidden">
         <Image
-          src="/images/benoit-2.jpg"
+          src="/images/benoit3.webp"
           alt="Benoît Vasse"
           fill
           sizes="(max-width: 768px) 100vw, 33vw"
@@ -24,11 +24,11 @@ export default function Hero() {
 
       {/* Texte côté droit */}
       <div className="w-full md:w-2/3 flex flex-col justify-center px-4">
-        <h1 className="text-4xl md:text-5xl font-serif text-gray-800 mb-6">
+        <h1 className="text-4xl md:text-5xl font-serif font-extrabold text-gray-800 mb-6">
           Préparez votre esprit,<br /> atteignez vos objectifs
         </h1>
-        <p className="text-base mb-4 max-w-xl">
-          Je m’appelle Benoît VASSE – je suis Coach professionnel certifié et Préparateur Mental diplômé. J’accompagne les athlètes, équipes et dirigeants vers la performance durable.
+        <p className="mb-4 max-w-xl">
+          Je m’appelle Benoît VASSE, je suis <strong>Coach professionnel certifié</strong> et <strong>Préparateur Mental diplômé</strong>. J’accompagne les athlètes, équipes et dirigeants vers la performance durable.
         </p>
 
         {/* Liens menu */}
@@ -40,7 +40,7 @@ export default function Hero() {
     <Link
       key={link.href}
       href={link.href}
-      className="underline underline-offset-2 hover:text-primary transition"
+      className="underline underline-offset-2 hover:text-primary transition rouge"
     >
       {link.label}
     </Link>

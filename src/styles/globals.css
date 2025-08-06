@@ -57,8 +57,9 @@
   --secondary-foreground: oklch(0.205 0 0);
   --muted: oklch(0.97 0 0);
   --muted-foreground: oklch(0.556 0 0);
-  --accent:#E57F2E;
-  --navi: #344A5F;
+  --accent:#8DA5D1;
+  --navi: #E20030;
+  --jaune: #FFF9C7;
   --accent-foreground: oklch(0.205 0 0);
   --destructive: oklch(0.577 0.245 27.325);
   --border: oklch(0.922 0 0);
@@ -113,10 +114,16 @@
   --sidebar-ring: oklch(0.556 0 0);
 }
 .bg-background {
-  background-color: #FCFCFC;
+  background-color: #FCFAEC;
 }
 .bg-navi {
-  background-color: #FCFCFC;
+  background-color: #1F344F;
+}
+.jaune{
+  color: #FFF9C7;
+}
+.rouge{
+  color: #E20030;
 }
 @layer base {
   * {

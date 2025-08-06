@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { Menu, X } from 'lucide-react';
 import { motion, AnimatePresence, easeOut } from 'framer-motion';
@@ -14,19 +15,14 @@ const navLinks = [
   { href: '/contact', label: 'Contactez‑moi', isButton: true },
 ];
 
-// Variants pour le conteneur (gère le stagger)
 const containerVariants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
-    transition: {
-      staggerChildren: 0.15,
-      delayChildren: 0.1,
-    },
+    transition: { staggerChildren: 0.15, delayChildren: 0.1 },
   },
 };
 
-// Variants pour chaque lien
 const itemVariants = {
   hidden: { y: 30, opacity: 0 },
   visible: {
@@ -36,7 +32,6 @@ const itemVariants = {
   },
 };
 
-// Variante spéciale pour le bouton (rebond)
 const buttonVariants = {
   hidden: { y: 30, opacity: 0, scale: 0.9 },
   visible: {
@@ -51,13 +46,8 @@ export default function BurgerMenu() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
 
-  // Bloquer le scroll quand le menu est ouvert
   useEffect(() => {
-    if (open) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = '';
-    }
+    document.body.style.overflow = open ? 'hidden' : '';
   }, [open]);
 
   return (
@@ -78,7 +68,7 @@ export default function BurgerMenu() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-secondary bg-opacity-70 z-50 flex flex-col items-center justify-center"
+            className="fixed inset-0 bg-navi bg-opacity-70 z-50 flex flex-col items-center justify-center"
           >
             {/* Bouton fermer */}
             <button
@@ -87,6 +77,17 @@ export default function BurgerMenu() {
             >
               <X className="h-8 w-8" />
             </button>
+
+            {/* Logo au-dessus */}
+            <div className="mb-8">
+              <Image
+                src="/images/logo.png"
+                alt="Logo Benoît Vasse"
+                width={60}
+                height={60}
+                className="object-contain"
+              />
+            </div>
 
             {/* Menu centré avec stagger */}
             <motion.nav

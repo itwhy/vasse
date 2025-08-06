@@ -26,14 +26,14 @@ export default async function HomePage() {
 
       {/* Section Témoignages */}
       <AnimatedSection>
-        <section className="container mx-auto py-20 px-8 rounded-xl bg-[#f9f5f0]">
-          <h2 className="text-3xl font-serif text-center mb-4">
+        <section className="container mx-auto py-20 px-8 rounded-xl bg-[#1F344F]">
+          <p className="font-serif italic text-center text-2xl jaune">
+"Chaque rendez-vous apportait quelque chose de nouveau,<br/>ce qui permettait
+une vraie progression."</p>
+<p className="text-center text-gray-200 mb-12">Sarah Toulemonde – Cavalière saut d’obstacle</p>
+          <h2 className="text-4xl font-serif font-bold jaune text-center mb-8">
             Ils m’ont fait confiance
           </h2>
-          <p className="text-center text-lg text-gray-600 max-w-2xl mx-auto mb-12">
-            Découvrez les témoignages de sportifs et dirigeants que j’ai
-            accompagnés vers leurs objectifs.
-          </p>
 
           {/* 3 cartes témoignages */}
           <div className="grid gap-8 sm:grid-cols-1 md:grid-cols-3 mb-12">

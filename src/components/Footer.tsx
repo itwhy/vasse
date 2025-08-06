@@ -1,6 +1,8 @@
 import Link from 'next/link';
 import { Instagram, Linkedin } from 'lucide-react';
 import CTAContact from '@/components/CTAContact';
+import Image from 'next/image';
+
 
 const navLinks = [
   { href: '/', label: 'Accueil' },
@@ -11,7 +13,7 @@ const navLinks = [
 
 export default function Footer() {
   return (
-    <footer className="w-full mt-4">
+    <footer className="w-full mt-4 px-2">
       {/* Bloc CTA clair (utilise le composant CTAContact) */}
       <div className="container mx-auto mb-4">
         <CTAContact
@@ -25,14 +27,21 @@ export default function Footer() {
 
       {/* Bloc foncé (footer principal) */}
       <div className="container mx-auto mb-4">
-        <div className="bg-primary text-white py-12 px-4 rounded-xl shadow-lg">
+        <div className="bg-[#152438] text-white py-12 px-4 rounded-xl shadow-lg">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 px-6">
             {/* Colonne 1 : Nom & contacts */}
             <div>
+              <Image
+              src="/images/logo.png"
+              alt="Logo Benoît Vasse"
+              width={50}
+              height={50}
+              className="object-contain mb-4"
+            />
               <h3 className="text-xl font-semibold mb-4">Benoît Vasse</h3>
               <p className="mb-2">Préparateur Mental & Coach</p>
               <p className="mb-2">
-                <a href="mailto:benoit@vassecommunicant.fr" className="hover:underline">
+                <a href="mailto:benoit@vassecommunicant.fr" className="hover:underline font-serif italic jaune">
                   benoit@vassecommunicant.fr
                 </a>
               </p>
@@ -60,14 +69,14 @@ export default function Footer() {
                 <Link
                   href="https://www.instagram.com/"
                   target="_blank"
-                  className="hover:opacity-80"
+                  className="hover:opacity-80 jaune"
                 >
                   <Instagram className="w-6 h-6" />
                 </Link>
                 <Link
                   href="https://www.linkedin.com/"
                   target="_blank"
-                  className="hover:opacity-80"
+                  className="hover:opacity-80 jaune"
                 >
                   <Linkedin className="w-6 h-6" />
                 </Link>

@@ -18,6 +18,7 @@ const playfair = Playfair_Display({
 });
 export const metadata: Metadata = {
   title: 'Benoît Vasse – Préparateur Mental',
+  viewport: 'width=device-width, initial-scale=1.0',
   description:
     'Préparateur mental diplômé et coach certifié. Accompagnement des sportifs de haut niveau et dirigeants vers la performance durable.',
   openGraph: {
@@ -39,7 +40,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <SpeedInsights/>
       <body suppressHydrationWarning className={`${notoSans.variable} ${playfair.variable} flex flex-col min-h-screen bg-background`}>
         <Header />
-        <main className="flex-1 container mx-auto">{children}</main>
+        <main className="flex-1 container mx-auto px-2">{children}</main>
         <Footer />
       </body>
     </html>
