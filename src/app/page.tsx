@@ -4,6 +4,7 @@ import CardTemoignage from '@/components/CardTemoignage';
 import Link from 'next/link';
 import path from 'path';
 import { promises as fs } from 'fs';
+import { Temoignage } from '@/types/temoignage';
 
 export const metadata = {
   title: 'Accueil – Benoît Vasse',
@@ -33,16 +34,16 @@ export default async function HomePage() {
 
           {/* 3 cartes témoignages */}
           <div className="grid gap-8 sm:grid-cols-1 md:grid-cols-3 mb-12">
-            {temoignages.slice(0, 3).map((t: any) => (
-              <CardTemoignage
-                key={t.slug}
-                href={`/temoignages/${t.slug}`}
-                photo={t.photo}
-                nom={t.nom}
-                sport={t.sport}
-                quote={t.quote}
-              />
-            ))}
+            {temoignages.slice(0, 3).map((t: Temoignage) => (
+  <CardTemoignage
+    key={t.slug}
+    href={`/temoignages/${t.slug}`}
+    photo={t.photo}
+    nom={t.nom}
+    sport={t.sport}
+    quote={t.quote}
+  />
+))}
           </div>
 
           {/* Bouton voir plus */}

@@ -1,6 +1,8 @@
 import path from 'path';
 import { promises as fs } from 'fs';
 import CardTemoignage from '@/components/CardTemoignage';
+import { Temoignage } from '@/types/temoignage';
+
 
 interface Temoin {
   slug: string;
@@ -21,7 +23,7 @@ export default async function TemoignagesPage() {
       <h1 className="text-4xl font-serif text-center mb-12">Témoignages</h1>
 
       <div className="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-        {temoignages.map((t) => (
+        {temoignages.map((t: Temoignage) => (
           <CardTemoignage
             key={t.slug}
             href={`/temoignages/${t.slug}`}
@@ -31,6 +33,7 @@ export default async function TemoignagesPage() {
             quote={t.quote}
           />
         ))}
+
       </div>
     </section>
   );
