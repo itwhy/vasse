@@ -14,18 +14,28 @@ interface Temoin {
   photo: string;
 }
 
-export default async function SingleTemoignage({ params }: { params: { slug: string } }) {
+interface PageProps {
+  params: {
+    slug: string;
+  };
+}
+
+export default async function SingleTemoignage({ params }: PageProps) {
+  // Lecture des données
   const filePath = path.join(process.cwd(), 'data', 'temoignages.json');
   const fileContents = await fs.readFile(filePath, 'utf-8');
   const temoignages: Temoin[] = JSON.parse(fileContents);
-  const temoin = temoignages.find((t) => t.slug === params.slug);
 
+  // Récupération du bon témoignage
+  const temoin = temoignages.find((t) => t.slug === params.slug);
   if (!temoin) return notFound();
 
   return (
     <article className="container mx-auto py-16 px-6 max-w-3xl">
+      {/* Fil d’Ariane + select */}
       <BreadcrumbSelect temoignages={temoignages} currentSlug={temoin.slug} />
 
+      {/* En-tête */}
       <div className="flex flex-col items-center text-center mb-8">
         <Image
           src={temoin.photo}
@@ -35,9 +45,17 @@ export default async function SingleTemoignage({ params }: { params: { slug: str
           className="rounded-full object-cover mb-6"
         />
         <h1 className="text-3xl font-serif mb-2">{temoin.nom}</h1>
-        <p className="text-gray-500">{temoin.sport} – {temoin.description}</p>
+        <p className="text-gray-500">
+          {temoin.sport} – {temoin.description}
+        </p>
       </div>
-      <blockquote className="italic text-lg text-gray-700 mb-8">“{temoin.quote}”</blockquote>
+
+      {/* Citation */}
+      <blockquote className="italic text-lg text-gray-700 mb-8">
+        “{temoin.quote}”
+      </blockquote>
+
+      {/* Contenu HTML */}
       <div
         className="prose prose-lg max-w-none"
         dangerouslySetInnerHTML={{ __html: temoin.contenu }}
