@@ -14,7 +14,22 @@ interface Temoin {
   photo: string;
 }
 
-export default async function SingleTemoignage({ params }: any) {  // <-- any ici pour bypass le typage foireux de Next
+type TemoignagePageProps = {
+  params: { slug: string };
+};
+
+// Pré-génération des pages
+export async function generateStaticParams() {
+  const filePath = path.join(process.cwd(), 'data', 'temoignages.json');
+  const fileContents = await fs.readFile(filePath, 'utf-8');
+  const temoignages: Temoin[] = JSON.parse(fileContents);
+
+  return temoignages.map((t) => ({
+    slug: t.slug,
+  }));
+}
+
+export default async function SingleTemoignage({ params }: TemoignagePageProps) {
   const filePath = path.join(process.cwd(), 'data', 'temoignages.json');
   const fileContents = await fs.readFile(filePath, 'utf-8');
   const temoignages: Temoin[] = JSON.parse(fileContents);
@@ -25,6 +40,7 @@ export default async function SingleTemoignage({ params }: any) {  // <-- any ic
   return (
     <article className="container mx-auto py-16 px-6 max-w-3xl">
       <BreadcrumbSelect temoignages={temoignages} currentSlug={temoin.slug} />
+
       <div className="flex flex-col items-center text-center mb-8">
         <Image
           src={temoin.photo}
@@ -38,9 +54,11 @@ export default async function SingleTemoignage({ params }: any) {  // <-- any ic
           {temoin.sport} – {temoin.description}
         </p>
       </div>
+
       <blockquote className="italic text-lg text-gray-700 mb-8">
         “{temoin.quote}”
       </blockquote>
+
       <div
         className="prose prose-lg max-w-none"
         dangerouslySetInnerHTML={{ __html: temoin.contenu }}
