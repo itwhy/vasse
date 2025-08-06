@@ -32,7 +32,7 @@ export default async function HomePage() {
 "Chaque rendez-vous apportait quelque chose de nouveau,<br/>ce qui permettait
 une vraie progression."</p>
 <p className="text-center text-gray-200 mb-12">Sarah Toulemonde – Cavalière saut d’obstacle</p>
-          <h2 className="text-4xl font-serif font-bold jaune text-center mb-8">
+          <h2 className="text-4xl font-serif font-extrabold jaune text-center mb-8">
             Ils m’ont fait confiance
           </h2>
 

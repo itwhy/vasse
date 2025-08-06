@@ -10,12 +10,12 @@ export default function Header() {
           <Image
             src="/images/logo.png"
             alt="Logo Benoît Vasse"
-            width={50}
-            height={50}
+            width={60}
+            height={60}
             className="object-contain"
             priority
           />
-          <span className="font-serif text-3xl text-gray-700">Benoît Vasse</span>
+          <span className="font-serif font-extrabold text-3xl leading-none  text-gray-900">Benoit<br/>Vasse</span>
         </Link>
         <BurgerMenu />
       </div>

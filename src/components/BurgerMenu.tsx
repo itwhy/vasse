@@ -8,10 +8,10 @@ import { motion, AnimatePresence, easeOut } from 'framer-motion';
 import { useEffect, useState } from 'react';
 
 const navLinks = [
-  { href: '/preparation-mentale', label: 'La préparation mentale' },
-  { href: '/approche', label: 'Mon approche' },
-  { href: '/a-propos-de-moi', label: 'À propos de moi' },
-  { href: '/temoignages', label: 'Témoignages' },
+  { href: '/preparation-mentale', label: 'La préparation mentale, ça vous parle ?' },
+  { href: '/approche', label: 'Mon approche terrain' },
+  { href: '/a-propos-de-moi', label: 'Qui suis-je ?' },
+  { href: '/temoignages', label: 'Les témoignages' },
   { href: '/contact', label: 'Contactez‑moi', isButton: true },
 ];
 
@@ -56,7 +56,7 @@ export default function BurgerMenu() {
       <button
         aria-label={open ? 'Fermer le menu' : 'Ouvrir le menu'}
         onClick={() => setOpen(!open)}
-        className="flex items-center gap-2 text-gray-700 z-50 relative"
+        className="flex items-center gap-2 text-gray-900 z-50 relative"
       >
         {open ? <X className="h-8 w-8 text-white" /> : <Menu className="h-8 w-8" />}
       </button>
@@ -75,8 +75,8 @@ export default function BurgerMenu() {
               <Image
                 src="/images/logo.png"
                 alt="Logo Benoît Vasse"
-                width={60}
-                height={60}
+                width={80}
+                height={80}
                 className="object-contain"
               />
             </div>
@@ -95,7 +95,7 @@ export default function BurgerMenu() {
                     <Link
                       href={link.href}
                       onClick={() => setOpen(false)}
-                      className="mt-6 inline-block px-6 py-3 bg-accent text-accent-foreground rounded-md text-lg font-medium"
+                      className="mt-6 inline-block px-6 py-3 bg-accent jaune rounded-md text-lg font-medium"
                     >
                       {link.label}
                     </Link>

@@ -30,7 +30,7 @@ export default function CardTemoignage({ href, photo, nom, sport }: CardTemoigna
 
       {/* Contenu en bas */}
       <div className="absolute bottom-0 p-4 text-white z-10">
-        <h2 className="text-4xl font-serif font-semibold">{nom}</h2>
+        <h2 className="text-4xl font-serif font-extrabold">{nom}</h2>
         <p className="text-sm text-gray-200">{sport}</p>
       </div>
     </Link>

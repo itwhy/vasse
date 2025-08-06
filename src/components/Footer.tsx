@@ -6,9 +6,11 @@ import Image from 'next/image';
 
 const navLinks = [
   { href: '/', label: 'Accueil' },
-  { href: '/approche', label: 'Approche' },
-  { href: '/parcours', label: 'Parcours' },
-  { href: '/contact', label: 'Contact' },
+  { href: '/preparation-mentale', label: 'La préparation mentale, ça vous parle ?' },
+  { href: '/approche', label: 'Mon approche terrain' },
+  { href: '/a-propos-de-moi', label: 'Qui suis-je ?' },
+  { href: '/temoignages', label: 'Les témoignages' },
+  { href: '/contact', label: 'Contactez‑moi'},
 ];
 
 export default function Footer() {
@@ -28,7 +30,7 @@ export default function Footer() {
       {/* Bloc foncé (footer principal) */}
       <div className="container mx-auto mb-4">
         <div className="bg-[#152438] text-white py-12 px-4 rounded-xl shadow-lg">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 px-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 px-6">
             {/* Colonne 1 : Nom & contacts */}
             <div>
               <Image
