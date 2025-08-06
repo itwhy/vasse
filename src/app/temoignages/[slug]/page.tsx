@@ -14,13 +14,11 @@ interface Temoin {
   photo: string;
 }
 
-interface PageProps {
-  params: {
-    slug: string;
-  };
-}
+export default async function SingleTemoignage(
+  props: { params: { slug: string } }
+) {
+  const { params } = props;
 
-export default async function SingleTemoignage({ params }: PageProps) {
   // Lecture des données
   const filePath = path.join(process.cwd(), 'data', 'temoignages.json');
   const fileContents = await fs.readFile(filePath, 'utf-8');
@@ -32,10 +30,8 @@ export default async function SingleTemoignage({ params }: PageProps) {
 
   return (
     <article className="container mx-auto py-16 px-6 max-w-3xl">
-      {/* Fil d’Ariane + select */}
       <BreadcrumbSelect temoignages={temoignages} currentSlug={temoin.slug} />
 
-      {/* En-tête */}
       <div className="flex flex-col items-center text-center mb-8">
         <Image
           src={temoin.photo}
@@ -49,13 +45,9 @@ export default async function SingleTemoignage({ params }: PageProps) {
           {temoin.sport} – {temoin.description}
         </p>
       </div>
-
-      {/* Citation */}
       <blockquote className="italic text-lg text-gray-700 mb-8">
         “{temoin.quote}”
       </blockquote>
-
-      {/* Contenu HTML */}
       <div
         className="prose prose-lg max-w-none"
         dangerouslySetInnerHTML={{ __html: temoin.contenu }}
