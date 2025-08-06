@@ -4,20 +4,8 @@ import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import BreadcrumbSelect from '@/components/BreadcrumbSelect';
 
-interface Temoin {
-  slug: string;
-  nom: string;
-  sport: string;
-  description: string;
-  quote: string;
-  contenu: string;
-  photo: string;
-}
-
-export default async function SingleTemoignage(
-  props: { params: { slug: string } } // <-- on tape ici directement
-) {
-  const { params } = props;
+export default async function SingleTemoignage(props: any) {
+  const params = props.params as { slug: string };
 
   const filePath = path.join(process.cwd(), 'data', 'temoignages.json');
   const fileContents = await fs.readFile(filePath, 'utf-8');

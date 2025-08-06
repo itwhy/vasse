@@ -1,17 +1,6 @@
 import path from 'path';
 import { promises as fs } from 'fs';
 import CardTemoignage from '@/components/CardTemoignage';
-import { Temoignage } from '@/types/temoignage';
-
-
-interface Temoin {
-  slug: string;
-  nom: string;
-  sport: string;
-  description: string;
-  //quote: string;
-  photo: string;
-}
 
 export default async function TemoignagesPage() {
   const filePath = path.join(process.cwd(), 'data', 'temoignages.json');
@@ -23,7 +12,7 @@ export default async function TemoignagesPage() {
       <h1 className="text-4xl font-serif text-center mb-12">Témoignages</h1>
 
       <div className="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-        {temoignages.map((t: Temoignage) => (
+        {temoignages.map((t) => (
           <CardTemoignage
             key={t.slug}
             href={`/temoignages/${t.slug}`}
@@ -32,7 +21,6 @@ export default async function TemoignagesPage() {
             sport={t.sport}
           />
         ))}
-
       </div>
     </section>
   );
