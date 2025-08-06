@@ -3,5 +3,4 @@ export interface Temoignage {
   photo: string;
   nom: string;
   sport: string;
-  quote: string;
 }

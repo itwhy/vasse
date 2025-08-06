@@ -9,7 +9,7 @@ interface Temoin {
   nom: string;
   sport: string;
   description: string;
-  quote: string;
+  //quote: string;
   photo: string;
 }
 
@@ -30,7 +30,6 @@ export default async function TemoignagesPage() {
             photo={t.photo}
             nom={t.nom}
             sport={t.sport}
-            quote={t.quote}
           />
         ))}
 

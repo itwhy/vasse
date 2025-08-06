@@ -41,7 +41,6 @@ export default async function HomePage() {
     photo={t.photo}
     nom={t.nom}
     sport={t.sport}
-    quote={t.quote}
   />
 ))}
           </div>

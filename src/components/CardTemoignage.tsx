@@ -6,10 +6,10 @@ interface CardTemoignageProps {
   photo: string;
   nom: string;
   sport: string;
-  quote: string;
+  //quote: string;
 }
 
-export default function CardTemoignage({ href, photo, nom, sport, quote }: CardTemoignageProps) {
+export default function CardTemoignage({ href, photo, nom, sport }: CardTemoignageProps) {
   return (
     <Link
       href={href}
