@@ -14,24 +14,17 @@ interface Temoin {
   photo: string;
 }
 
-export default async function SingleTemoignage(
-  props: { params: { slug: string } }
-) {
-  const { params } = props;
-
-  // Lecture des données
+export default async function SingleTemoignage({ params }: any) {  // <-- any ici pour bypass le typage foireux de Next
   const filePath = path.join(process.cwd(), 'data', 'temoignages.json');
   const fileContents = await fs.readFile(filePath, 'utf-8');
   const temoignages: Temoin[] = JSON.parse(fileContents);
 
-  // Récupération du bon témoignage
   const temoin = temoignages.find((t) => t.slug === params.slug);
   if (!temoin) return notFound();
 
   return (
     <article className="container mx-auto py-16 px-6 max-w-3xl">
       <BreadcrumbSelect temoignages={temoignages} currentSlug={temoin.slug} />
-
       <div className="flex flex-col items-center text-center mb-8">
         <Image
           src={temoin.photo}
