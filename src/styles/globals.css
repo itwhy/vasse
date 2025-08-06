@@ -57,7 +57,7 @@
   --secondary-foreground: oklch(0.205 0 0);
   --muted: oklch(0.97 0 0);
   --muted-foreground: oklch(0.556 0 0);
-  --accent:#8DA5D1;
+  --accent:#F01A47;
   --navi: #E20030;
   --jaune: #FFF9C7;
   --accent-foreground: oklch(0.205 0 0);
@@ -128,6 +128,10 @@
 .temoignage-content > p{
   margin-bottom: 1.5rem;
 }
+.bigshadow{
+  box-shadow: 40px 40px 0px #FFF9C7;
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;

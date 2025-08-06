@@ -23,7 +23,7 @@ export default function CTAContact({
         src={image}
         alt="CTA background"
         fill
-        className="object-cover object-right"
+        className="object-cover object-top object-right"
         priority
       />
 
@@ -32,13 +32,13 @@ export default function CTAContact({
 
       {/* Contenu texte */}
       <div className="absolute inset-y-0 left-0 w-full md:w-2/3 flex flex-col justify-center p-8 md:p-16">
-        <h2 className="text-3xl md:text-4xl font-serif mb-4 text-gray-900">{title}</h2>
+        <h2 className="text-3xl md:text-4xl font-serif font-extrabold mb-4 text-gray-900">{title}</h2>
         {subtitle && (
           <p className="text-lg mb-6 max-w-md text-gray-700">{subtitle}</p>
         )}
         <Link
   href={href}
-  className="w-fit inline-block px-6 py-3 bg-accent text-accent-foreground rounded-lg font-medium shadow-xl transition 
+  className="w-fit inline-block px-6 py-3 bg-accent jaune rounded-lg font-medium shadow-xl transition 
              hover:shadow-xl hover:-translate-y-1 active:translate-y-0 active:shadow-md"
 >
   {buttonText}

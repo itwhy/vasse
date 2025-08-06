@@ -1,3 +1,5 @@
+{/* eslint-disable-next-line react/no-unescaped-entities */}
+
 import AnimatedSection from '@/components/AnimatedSection';
 import Hero from '@/components/Hero';
 import CardTemoignage from '@/components/CardTemoignage';
@@ -27,9 +29,9 @@ export default async function HomePage() {
       {/* Section Témoignages */}
       <AnimatedSection>
         <section className="container mx-auto py-20 px-8 rounded-xl bg-[#1F344F]">
-          <p className="font-serif italic text-center text-2xl jaune">
-  {'"Chaque rendez-vous apportait quelque chose de nouveau, ce qui permettait une vraie progression."'}
-</p>
+          <p className="font-serif italic text-center text-2xl jaune mb-4">
+"Chaque rendez-vous apportait quelque chose de nouveau,<br/>ce qui permettait
+une vraie progression."</p>
 <p className="text-center text-gray-200 mb-12">Sarah Toulemonde – Cavalière saut d’obstacle</p>
           <h2 className="text-4xl font-serif font-bold jaune text-center mb-8">
             Ils m’ont fait confiance
@@ -52,7 +54,7 @@ export default async function HomePage() {
           <div className="text-center">
             <Link
               href="/temoignages"
-              className="inline-block px-6 py-3 bg-accent text-accent-foreground rounded-md font-medium shadow-md hover:shadow-lg hover:-translate-y-1 transition"
+              className="inline-block px-6 py-3 bg-accent jaune rounded-md font-medium shadow-lg hover:shadow-xl hover:-translate-y-1 transition"
             >
               Voir tous les témoignages
             </Link>

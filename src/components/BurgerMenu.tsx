@@ -52,13 +52,13 @@ export default function BurgerMenu() {
 
   return (
     <>
-      {/* Bouton burger */}
+      {/* Bouton burger/croix */}
       <button
-        aria-label="Ouvrir le menu"
-        onClick={() => setOpen(true)}
-        className="flex items-center gap-2 text-gray-700"
+        aria-label={open ? 'Fermer le menu' : 'Ouvrir le menu'}
+        onClick={() => setOpen(!open)}
+        className="flex items-center gap-2 text-gray-700 z-50 relative"
       >
-        <Menu className="h-6 w-6" />
+        {open ? <X className="h-8 w-8 text-white" /> : <Menu className="h-8 w-8" />}
       </button>
 
       {/* Overlay plein écran */}
@@ -68,16 +68,8 @@ export default function BurgerMenu() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-navi bg-opacity-70 z-50 flex flex-col items-center justify-center"
+            className="fixed inset-0 bg-navi bg-opacity-70 z-40 flex flex-col items-center justify-center"
           >
-            {/* Bouton fermer */}
-            <button
-              onClick={() => setOpen(false)}
-              className="absolute top-6 right-6 text-white"
-            >
-              <X className="h-8 w-8" />
-            </button>
-
             {/* Logo au-dessus */}
             <div className="mb-8">
               <Image

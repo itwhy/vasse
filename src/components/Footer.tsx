@@ -17,7 +17,7 @@ export default function Footer() {
       {/* Bloc CTA clair (utilise le composant CTAContact) */}
       <div className="container mx-auto mb-4">
         <CTAContact
-          image="/images/benoit-vasse-contact-2.jpeg" // Mets ici une image adaptée (ex: portrait, décor)
+          image="/images/benoit-vasse-contact-1.jpeg" // Mets ici une image adaptée (ex: portrait, décor)
           title="Parlez-moi de vos objectifs"
           subtitle="Contactez-moi dès aujourd’hui et préparons votre réussite."
           buttonText="Rencontrons‑nous"
