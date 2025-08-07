@@ -105,7 +105,7 @@ export default function BurgerMenu() {
                     <Link
                       href={link.href}
                       onClick={() => setOpen(false)}
-                      className={`text-2xl font-light ${
+                      className={`text-2xl font-extrabold ${
                         pathname === link.href
                           ? 'text-accent'
                           : 'text-white hover:text-accent'

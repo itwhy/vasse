@@ -1,9 +1,12 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation } from "swiper/modules";
+
 import {
   MessagesSquare,
-  Goal,
+  Check,
   Handshake,
   BicepsFlexed,
   ChevronsRight,
@@ -11,6 +14,14 @@ import {
 } from "lucide-react";
 import "swiper/css";
 
+const navLinks = [
+  { href: "#convictions", label: "mes convictions" },
+  { href: "#etapes", label: "Comment va se passer notre collaboration ?" },
+  {
+    href: "#outils",
+    label: "Avoir un outil c’est bien… savoir s’en servir c’est mieux !",
+  },
+];
 export default function ApprochePage() {
   return (
     <div className="container mx-auto py-16 px-2">
@@ -76,12 +87,25 @@ export default function ApprochePage() {
               </strong>
               .
             </p>
+            {/* Liens menu */}
+            <p className="mt-4 font-bold">Découvrez : </p>
+            <div className="flex flex-wrap gap-4 mb-8 font-bold">
+              {navLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className=" font-serif bg-[#FFF9C7] italic underline underline-offset-2 hover:text-primary transition rouge font-semibold"
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </div>
           </div>
         </div>
       </section>
 
       {/* SECTION 2 — Convictions */}
-      <section>
+      <section id="convictions">
         <h2 className="text-5xl font-serif font-extrabold text-center mb-8 mx-auto leading-tight">
           Mes convictions
         </h2>
@@ -147,14 +171,16 @@ export default function ApprochePage() {
       </section>
 
       {/* SECTION 3 — Collaboration */}
-      <section className="mt-20 relative">
+      <section className="mt-20 relative" id="etapes">
         <h2 className="text-5xl font-serif font-extrabold text-center mb-8 mx-auto leading-tight">
           Comment va se passer notre collaboration ?
         </h2>
         <h3 className="text-center mb-8 mx-auto">
-          Chaque accompagnement est unique. Voici les grandes étapes que nous suivrons ensemble pour construire un travail sur mesure, adapté à votre discipline, votre réalité et vos objectifs.
+          Chaque accompagnement est unique. Voici les grandes étapes que nous
+          suivrons ensemble pour construire un travail sur mesure, adapté à
+          votre discipline, votre réalité et vos objectifs.
         </h3>
-        <div className="w-24 mx-auto mb-12">
+        <div className="w-24 mx-auto">
           <Image
             src="/images/logo.png"
             alt="Logo Benoît Vasse"
@@ -169,6 +195,7 @@ export default function ApprochePage() {
           <Swiper
             spaceBetween={20}
             slidesPerView={1.2}
+            navigation={true}
             className="overflow-visible relative z-1 !pb-12"
             breakpoints={{
               640: { slidesPerView: 1.2 },
@@ -179,27 +206,52 @@ export default function ApprochePage() {
             {[
               {
                 title: "Comprendre le besoin",
-                icon: <MessagesSquare className="w-20 h-20 text-accent" strokeWidth={1} />,
+                icon: (
+                  <MessagesSquare
+                    className="w-20 h-20 text-accent"
+                    strokeWidth={1}
+                  />
+                ),
                 desc: "Échanger avec vous pour cerner vos objectifs, vos contraintes et vos attentes.",
               },
               {
                 title: "Définir un cadre",
-                icon: <Handshake className="w-20 h-20 text-accent" strokeWidth={1} />,
+                icon: (
+                  <Handshake
+                    className="w-20 h-20 text-accent"
+                    strokeWidth={1}
+                  />
+                ),
                 desc: "Mettre en place un accompagnement structuré, personnalisé, en accord avec vos valeurs.",
               },
               {
                 title: "Explorer vos ressources",
-                icon: <BicepsFlexed className="w-20 h-20 text-accent" strokeWidth={1} />,
+                icon: (
+                  <BicepsFlexed
+                    className="w-20 h-20 text-accent"
+                    strokeWidth={1}
+                  />
+                ),
                 desc: "Identifier vos points forts, vos freins, et faire émerger votre potentiel.",
               },
               {
                 title: "Mettre en mouvement",
-                icon: <ChevronsRight className="w-20 h-20 text-accent" strokeWidth={1} />,
+                icon: (
+                  <ChevronsRight
+                    className="w-20 h-20 text-accent"
+                    strokeWidth={1}
+                  />
+                ),
                 desc: "Co-construire des rituels, des stratégies, des mises en action concrètes.",
               },
               {
                 title: "Évaluer et ajuster",
-                icon: <RefreshCcw className="w-20 h-20 text-accent" strokeWidth={1} />,
+                icon: (
+                  <RefreshCcw
+                    className="w-20 h-20 text-accent"
+                    strokeWidth={1}
+                  />
+                ),
                 desc: "Analyser les effets, capitaliser sur les progrès et ajuster en continu.",
               },
             ].map((step, index) => (
@@ -219,7 +271,91 @@ export default function ApprochePage() {
                 </div>
               </SwiperSlide>
             ))}
+            <div className="swiper-button-prev"></div>
+            <div className="swiper-button-next"></div>
           </Swiper>
+        </div>
+      </section>
+
+      <section className="mb-20" id="outils">
+        {/* Titre et sous-titre en pleine largeur */}
+        <div className="text-center mb-12">
+          <h2 className="text-5xl font-serif font-extrabold max-w-2xl mx-auto leading-tight">
+            Avoir un outil c’est bien…
+            <br />
+            savoir s’en servir c’est mieux !
+          </h2>
+          <div className="w-24 mx-auto mb-6 mt-4">
+            <Image
+              src="/images/logo.png"
+              alt="Logo Benoît Vasse"
+              width={50}
+              height={50}
+              className="object-contain"
+            />
+          </div>
+        </div>
+
+        {/* Contenu avec image + paragraphe */}
+        <div className="flex flex-col md:flex-row-reverse items-center gap-16">
+          <div className="md:w-1/2 prose prose-lg max-w-none text-gray-900">
+            <h3 className="text-xl font-extrabold mb-4">
+              En fonction des objectifs à travailler, je propose des outils
+              adaptés et éprouvés.
+            </h3>
+            <p className="mb-4">
+              J’explique leurs choix, j’éclaire sur les bienfaits, j’accompagne
+              dans leurs découvertes et leurs pratiques.
+              <br />
+              <strong>L’essentiel est de faire sens !</strong>
+            </p>
+            
+  <div className="flex flex-col md:flex-row md:gap-12">
+    {/* Colonne de gauche */}
+    <div className="flex-1 space-y-3">
+      {[
+        "Fixation d’objectifs",
+        "Dialogue interne",
+        "Relaxation",
+        "Imagerie mentale",
+        "Méditation",
+        "Contrôle respiratoire",
+      ].map((item, index) => (
+        <div key={index} className="flex items-center gap-3">
+          <Check className="w-5 h-5 text-accent" />
+          <span>{item}</span>
+        </div>
+      ))}
+    </div>
+
+    {/* Colonne de droite */}
+    <div className="flex-1 space-y-3 mt-6 md:mt-0">
+      {[
+        "Switch",
+        "Routines de performance",
+        "Coaching de vie",
+        "Communication non verbale",
+        "DISC",
+        "Rythmes biologiques",
+      ].map((item, index) => (
+        <div key={index} className="flex items-center gap-3">
+          <Check className="w-5 h-5 text-accent" />
+          <span>{item}</span>
+        </div>
+      ))}
+    </div>
+  </div>
+          </div>
+          <div className="md:w-1/2">
+            <div className="relative w-full min-h-[400px] aspect-[9/11] rounded-lg overflow-hidden bigshadow">
+              <Image
+                src="/images/benoit-outils.webp"
+                alt="Mon approche"
+                fill
+                className="object-cover"
+              />
+            </div>
+          </div>
         </div>
       </section>
     </div>
