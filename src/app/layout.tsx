@@ -7,7 +7,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const notoSans = Noto_Sans({
   subsets: ['latin'],
-  weight: ['100', '300', '400', '500', '700'],
+  weight: ['100', '300', '400', '500', '700', '900'],
   variable: '--font-noto-sans',
 });
 

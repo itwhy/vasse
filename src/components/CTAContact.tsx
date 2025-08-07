@@ -34,7 +34,7 @@ export default function CTAContact({
       <div className="absolute inset-y-0 left-0 w-full md:w-2/3 flex flex-col justify-center p-8 md:p-16">
         <h2 className="text-3xl md:text-4xl font-serif font-extrabold mb-4 text-gray-900">{title}</h2>
         {subtitle && (
-          <p className="text-lg mb-6 max-w-md text-gray-700">{subtitle}</p>
+          <p className="text-lg mb-6 max-w-md font-bold text-gray-900">{subtitle}</p>
         )}
         <Link
   href={href}

@@ -9,11 +9,13 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@getbrevo/brevo": "^3.0.1",
     "@radix-ui/react-dialog": "^1.1.14",
     "@radix-ui/react-navigation-menu": "^1.2.13",
     "@radix-ui/react-select": "^2.2.5",
     "@radix-ui/react-slot": "^1.2.3",
     "@vercel/speed-insights": "^1.2.0",
+    "brevo": "^1.0.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "framer-motion": "^12.23.11",
@@ -27,6 +29,7 @@
     "react": "19.1.0",
     "react-burger-menu": "^3.1.0",
     "react-dom": "19.1.0",
+    "swiper": "^11.2.10",
     "tailwind-merge": "^3.3.1"
   },
   "devDependencies": {

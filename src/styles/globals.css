@@ -130,7 +130,10 @@
   margin-bottom: 1.5rem;
 }
 .bigshadow{
-  box-shadow: 40px 40px 0px #FFF9C7;
+  box-shadow: 35px 35px 0px #FFF9C7;
+}
+.bigshadow-rouge{
+  box-shadow: 40px 40px 0px #E20030;
 }
 
 @layer base {
