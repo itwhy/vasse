@@ -65,14 +65,15 @@ export default async function TemoignagesPage() {
     <section className="container mx-auto py-16 px-6">
       {/* H1 unique pour la page */}
       <div className="text-center mb-12">
+                <p className="text-xl font-sans uppercase font-extrabold mt-4">
+          Témoignages
+        </p>
         <h1 className="text-5xl font-serif font-extrabold max-w-2xl mx-auto leading-tight">
           Ils m&apos;ont fait confiance, et vous en parlent
         </h1>
 
         {/* Sous-titre en paragraphe (évite H2 juste pour du style) */}
-        <p className="text-xl font-sans uppercase font-extrabold mt-4">
-          Témoignages
-        </p>
+
 
         <div className="w-24 mx-auto mb-6 mt-4">
           <Image
