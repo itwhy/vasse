@@ -42,10 +42,10 @@ export default function Header() {
 
           <span
             className={`font-serif font-extrabold leading-none text-grey-800 transition-all duration-300 ${
-              isScrolled ? 'text-2xl' : 'text-3xl md:text-4xl'
+              isScrolled ? 'text-xl' : 'text-2xl md:text-3xl'
             }`}
           >
-            Benoit<br />Vasse
+            Benoît<br />VASSE
           </span>
         </Link>
 

@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { ArrowRight } from 'lucide-react';
 
 interface CTAContactProps {
   image: string;
@@ -38,10 +39,12 @@ export default function CTAContact({
         )}
         <Link
   href={href}
-  className="w-fit inline-block px-6 py-3 bg-accent jaune rounded-lg font-medium shadow-xl transition 
-             hover:shadow-xl hover:-translate-y-1 active:translate-y-0 active:shadow-md"
+  className=" w-fit px-6 py-3 bg-accent jaune rounded-full font-medium shadow-xl transition
+             hover:shadow-xl hover:-translate-y-1 active:translate-y-0 active:shadow-md flex items-center gap-2"
 >
   {buttonText}
+  <ArrowRight className="w-4 h-4" />
+  
 </Link>
       </div>
     </div>

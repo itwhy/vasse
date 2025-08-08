@@ -21,7 +21,7 @@ export default function Footer() {
         <CTAContact
           image="/images/benoit-vasse-contact-1.jpeg" // Mets ici une image adaptée (ex: portrait, décor)
           title="Parlez-moi de vos objectifs"
-          subtitle="Contactez-moi dès aujourd’hui et préparons votre réussite."
+          subtitle="Contactez moi dès aujourd’hui et préparons ensemble votre réussite"
           buttonText="Rencontrons‑nous"
           href="/contact"
         />
@@ -41,7 +41,12 @@ export default function Footer() {
               className="object-contain mb-4"
             />
               <h3 className="text-xl font-semibold mb-4">Benoît Vasse</h3>
-              <p className="mb-2">Préparateur Mental & Coach</p>
+              <p className="mb-2">Préparateur mental<br />et Coach professionnel</p>
+              <p className="mb-2">
+                <a href="https://vassecommunicant.fr" className="hover:underline font-serif italic jaune">
+                  vassecommunicant.fr
+                </a>
+              </p>
               <p className="mb-2">
                 <a href="mailto:benoit@vassecommunicant.fr" className="hover:underline font-serif italic jaune">
                   benoit@vassecommunicant.fr

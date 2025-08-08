@@ -1,10 +1,11 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { ArrowRight } from 'lucide-react';
 
 const navLinks = [
   { href: '/preparation-mentale', label: "Ce qu'est la préparation mentale" },
   { href: '/approche', label: 'Mon approche terrain' },
-  { href: '/a-propos-de-moi', label: 'Qui suis-je' },
+  { href: '/a-propos-de-moi', label: 'Qui je suis' },
 ];
 
 export default function Hero() {
@@ -32,16 +33,15 @@ export default function Hero() {
         </p>
 
         {/* Liens menu */}
-        <p>Découvrez : </p>
-<div className="flex flex-wrap gap-4 mb-8 font-bold">
-  
+        <p><strong>Découvrez :</strong> </p>
+<div className="flex flex-col gap-4 mt-2 font-bold">
   {navLinks.map((link) => (
     <Link
       key={link.href}
       href={link.href}
-      className=" font-serif italic underline underline-offset-2 hover:text-primary px-1 transition rouge font-bold"
+      className="w-fit bg-link uppercase text-base text-white shadow-lg rounded-full py-1 px-4 font-sans hover:jaune transition  flex items-center gap-2"
     >
-      {link.label}
+      {link.label}<ArrowRight className="w-4 h-4" />
     </Link>
   ))}
 </div>

@@ -33,7 +33,7 @@ export default async function HomePage() {
 une vraie progression."</p>
 <p className="text-center text-gray-200 mb-12">Sarah Toulemonde – Cavalière saut d’obstacle</p>
           <h2 className="text-4xl font-serif font-extrabold jaune text-center mb-8">
-            Ils m’ont fait confiance
+            Ils/Elles m’ont fait confiance
           </h2>
 
           {/* 3 cartes témoignages */}
@@ -53,7 +53,7 @@ une vraie progression."</p>
           <div className="text-center">
             <Link
               href="/temoignages"
-              className="inline-block px-6 py-3 bg-accent jaune rounded-md font-medium shadow-lg hover:shadow-xl hover:-translate-y-1 transition"
+              className="inline-block px-6 py-3 bg-accent jaune rounded-full font-medium shadow-lg hover:shadow-xl hover:-translate-y-1 transition"
             >
               Voir tous les témoignages
             </Link>
