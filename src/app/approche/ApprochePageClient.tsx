@@ -2,6 +2,8 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation } from "swiper/modules";
 import {
   UserSearch,
   Trophy,
@@ -137,21 +139,136 @@ export default function ApprochePageClient() {
       </section>
 
       {/* SECTION 3 — Collaboration */}
-      <section className="mt-20 relative" id="etapes">
-        <h2 className="text-5xl font-serif font-extrabold text-center mb-8 mx-auto leading-tight">
-          Comment va se passer notre collaboration ?
-        </h2>
-        <h3 className="text-center mb-8 mx-auto">
-          Chaque accompagnement est unique. Voici les grandes étapes que nous suivrons ensemble pour construire un travail sur mesure,
-          adapté à votre discipline, votre réalité et vos objectifs.
-        </h3>
-        <div className="w-24 mx-auto">
-          <Image src="/images/logo.png" alt="Logo Benoît Vasse" width={50} height={50} className="object-contain" />
-        </div>
-
-        {/* (Tu peux remettre ici ton Swiper si besoin plus tard) */}
-      </section>
-
+       {/* SECTION 3 — Collaboration */}
+            <section className="mt-20 relative" id="etapes">
+              <h2 className="text-5xl font-serif font-extrabold text-center mb-8 mx-auto leading-tight">
+                Comment va se passer notre collaboration ?
+              </h2>
+              <h3 className="text-center mb-8 mx-auto">
+                Chaque accompagnement est unique. Voici les grandes étapes que nous
+                suivrons ensemble pour construire un travail sur mesure, adapté à
+                votre discipline, votre réalité et vos objectifs.
+              </h3>
+              <div className="w-24 mx-auto">
+                <Image
+                  src="/images/logo.png"
+                  alt="Logo Benoît Vasse"
+                  width={50}
+                  height={50}
+                  className="object-contain"
+                />
+              </div>
+      
+              {/* Trait horizontal pointillé */}
+              <div className="py-12 px-4">
+                <Swiper
+                  spaceBetween={20}
+                  slidesPerView={1.2}
+                  navigation={true}
+                  className="overflow-visible relative z-1 !pb-12"
+                  breakpoints={{
+                    640: { slidesPerView: 1.2 },
+                    768: { slidesPerView: 2.2 },
+                    1024: { slidesPerView: 3.2 },
+                  }}
+                >
+                  {[
+                    {
+        icon: (
+          <Trophy
+            className="w-20 h-20 text-accent"
+            strokeWidth={1}
+          />
+        ),
+        desc: (
+          <>
+            <strong>Je m’adapte aux spécificités de votre sport.</strong>{" "}
+            J’en comprends les règles et les enjeux.
+          </>
+        ),
+      },
+      {
+        icon: (
+          <UserSearch
+            className="w-20 h-20 text-accent"
+            strokeWidth={1}
+          />
+        ),
+        desc: (
+          <>
+            <strong>J’écoute et analyse les difficultés</strong> que
+            vous rencontrez = <strong>votre état présent</strong>. Je
+            réalise des <strong>entretiens semi directifs</strong> pour
+            aborder et comprendre votre réalité dans les sphères{" "}
+            <strong>personnelles</strong>,{" "}
+            <strong>professionnelles / scolaires / universitaires</strong>{" "}
+            et <strong>sportives</strong>.
+          </>
+        ),
+      },
+      {
+        icon: (
+          <BarChart3
+            className="w-20 h-20 text-accent"
+            strokeWidth={1}
+          />
+        ),
+        desc: (
+          <>
+            Je propose <strong>toute une gamme de tests</strong> qui
+            analyseront avec précision vos <strong>habiletés</strong> à
+            l’entrainement comme en compétition.
+          </>
+        ),
+      },
+      {
+        icon: (
+          <Target
+            className="w-20 h-20 text-accent"
+            strokeWidth={1}
+          />
+        ),
+        desc: (
+          <>
+            Je fixe avec vous <strong>votre objectif global</strong> ={" "}
+            <strong>votre état désiré</strong>. Je définis et propose
+            les <strong>outils</strong> pour renforcer et développer les{" "}
+            <strong>capacités mentales</strong> à acquérir.
+          </>
+        ),
+      },
+      {
+        icon: (
+          <CalendarCheck
+            className="w-20 h-20 text-accent"
+            strokeWidth={1}
+          />
+        ),
+        desc: (
+          <>
+            J’établis un <strong>plan d’action</strong> reposant sur des{" "}
+            <strong>séances d’accompagnement régulières</strong>.
+          </>
+        ),
+      },
+                  ].map((step, index) => (
+                    <SwiperSlide key={index}>
+                      <div className="relative rounded-xl bg-white/70  p-6 min-h-[500px] shadow-lg flex flex-col text-center">
+                        <div className="w-full flex items-center text-center justify-center w-24 h-24 mb-4">
+                          {step.icon}
+                        </div>
+                        <span className="text-6xl w-full text-center  px-3 py-1 font-extrabold">
+                          {index + 1}
+                        </span>
+                        <p>{step.desc}</p>
+                      </div>
+                    </SwiperSlide>
+                  ))}
+                  <div className="swiper-button-prev"></div>
+                  <div className="swiper-button-next"></div>
+                </Swiper>
+              </div>
+            </section>
       {/* SECTION 4 — Outils */}
       <section className="mb-20" id="outils">
         <div className="text-center mb-12">
