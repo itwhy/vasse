@@ -105,7 +105,7 @@ export default function ApprochePage() {
       </section>
 
       {/* SECTION 2 — Convictions */}
-      <section id="convictions" className="bg-background-navi p-16 rounded-xl">
+      <section id="convictions" className="bg-background-navi p-4 md:p-8 rounded-xl">
         <h2 className="text-5xl jaune font-serif font-extrabold text-center mb-8 mx-auto leading-tight">
           Mes convictions
         </h2>

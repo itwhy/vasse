@@ -52,7 +52,7 @@ vouloir »
           <div className="md:w-1/2">
             <div className="relative w-full min-h-[400px] aspect-[9/11] rounded-lg overflow-hidden bigshadow">
               <Image
-                src="/images/benoit-vasse-preparateur-approche.webp"
+                src="/images/preparation-mentale-1.webp"
                 alt="Mon approche"
                 fill
                 className="object-cover"
@@ -81,7 +81,7 @@ combativité Sommeil compliqué …
                 <Link
                   key={link.href}
                   href={link.href}
-                  className=" font-serif bg-[#FFF9C7] italic underline underline-offset-2 hover:text-primary transition rouge font-semibold"
+                  className=" font-serif italic underline underline-offset-2 hover:text-primary transition rouge font-bold"
                 >
                   {link.label}
                 </Link>
