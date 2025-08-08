@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { Instagram, Linkedin } from 'lucide-react';
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -47,7 +48,7 @@ export default function ContactPage() {
             value={formData.nom}
             onChange={handleChange}
             required
-            className="w-full border rounded-md p-3"
+            className="w-full border rounded-md p-3 bg-white/70"
           />
           <input
             type="email"
@@ -56,7 +57,7 @@ export default function ContactPage() {
             value={formData.email}
             onChange={handleChange}
             required
-            className="w-full border rounded-md p-3"
+            className="w-full border rounded-md p-3 bg-white/70"
           />
           <input
             type="phone"
@@ -65,7 +66,7 @@ export default function ContactPage() {
             value={formData.phone}
             onChange={handleChange}
             required
-            className="w-full border rounded-md p-3"
+            className="w-full border rounded-md p-3 bg-white/70"
           />
           <textarea
             name="message"
@@ -74,7 +75,7 @@ export default function ContactPage() {
             value={formData.message}
             onChange={handleChange}
             required
-            className="w-full border rounded-md p-3"
+            className="w-full border rounded-md p-3 bg-white/70"
           />
           <button
             type="submit"
@@ -87,12 +88,33 @@ export default function ContactPage() {
           {status === 'error' && <p className="text-red-600">Erreur lors de l’envoi.</p>}
         </form>
 
-        {/* Infos de contact 1/3 */}
+        {/* Infos + Réseaux sociaux 1/3 */}
         <div className="space-y-6">
-          <h2 className="text-2xl font-serif font-semibold">Coordonnées</h2>
-          <p><strong>Email :</strong> benoit@email.fr</p>
-          <p><strong>Téléphone :</strong> 06 12 34 56 78</p>
-          <p><strong>Adresse :</strong><br />123 Rue du Coaching<br />75000 Paris</p>
+          <h2 className="text-2xl font-serif font-semibold">Informations</h2>
+          <p className="text-lg"><strong>Nom :</strong> Benoît Vasse</p>
+          <p className="text-lg"><strong>Téléphone :</strong> 06 12 12 17 10</p>
+
+          <h2 className="text-2xl font-serif font-semibold mt-8">Réseaux sociaux</h2>
+          <div className="flex flex-col gap-4">
+            <a
+              href="https://www.instagram.com/benoit.vasse/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-3 text-gray-800 hover:text-accent transition"
+            >
+              <Instagram className="w-6 h-6" />
+              Instagram
+            </a>
+            <a
+              href="https://www.linkedin.com/in/beno%C3%AEt-vasse-b09948a/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-3 text-gray-800 hover:text-accent transition"
+            >
+              <Linkedin className="w-6 h-6" />
+              LinkedIn
+            </a>
+          </div>
         </div>
       </div>
     </section>

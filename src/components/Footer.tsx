@@ -47,7 +47,7 @@ export default function Footer() {
                   benoit@vassecommunicant.fr
                 </a>
               </p>
-              <p>06 12 34 56 78</p>
+              <p>06 12 12 17 10</p>
             </div>
 
             {/* Colonne 2 : Menu */}
@@ -69,14 +69,14 @@ export default function Footer() {
               <h3 className="text-xl font-semibold mb-4">Réseaux sociaux</h3>
               <div className="flex space-x-4">
                 <Link
-                  href="https://www.instagram.com/"
+                  href="https://www.instagram.com/benoit.vasse/"
                   target="_blank"
                   className="hover:opacity-80 jaune"
                 >
                   <Instagram className="w-6 h-6" />
                 </Link>
                 <Link
-                  href="https://www.linkedin.com/"
+                  href="https://www.linkedin.com/in/beno%C3%AEt-vasse-b09948a/"
                   target="_blank"
                   className="hover:opacity-80 jaune"
                 >
