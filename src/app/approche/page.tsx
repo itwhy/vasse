@@ -49,7 +49,7 @@ export default function ApprochePage() {
         {/* Contenu avec image + paragraphe */}
         <div className="flex flex-col md:flex-row-reverse items-center gap-16">
           <div className="md:w-1/2">
-            <div className="relative w-full min-h-[400px] aspect-[9/11] rounded-lg overflow-hidden bigshadow">
+            <div className="relative w-full min-h-[400px] aspect-[9/11] rounded-lg overflow-hidden shadow-xl">
               <Image
                 src="/images/benoit-vasse-preparateur-approche.webp"
                 alt="Mon approche"
@@ -94,7 +94,7 @@ export default function ApprochePage() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className=" font-serif bg-[#FFF9C7] italic underline underline-offset-2 hover:text-primary transition rouge font-semibold"
+                  className=" font-serif  font-bold italic underline underline-offset-2 hover:text-primary transition rouge"
                 >
                   {link.label}
                 </Link>
@@ -157,7 +157,7 @@ export default function ApprochePage() {
                 index % 2 !== 0 ? "md:flex-row-reverse" : ""
               } items-start`}
             >
-              <div className="md:w-3/4 border-2 p-6 rounded-xl bigshadow">
+              <div className="md:w-3/4  p-6 rounded-xl bg-white">
                 <h3 className="text-xl font-extrabold mb-2">{item.title}</h3>
                 <p className="font-serif italic font-extrabold text-lg text-accent mb-4">
                   {item.quote}
@@ -205,68 +205,96 @@ export default function ApprochePage() {
           >
             {[
               {
-                title: "Comprendre le besoin",
                 icon: (
                   <MessagesSquare
                     className="w-20 h-20 text-accent"
                     strokeWidth={1}
                   />
                 ),
-                desc: "Échanger avec vous pour cerner vos objectifs, vos contraintes et vos attentes.",
+                desc: (
+                  <>
+                    <strong>
+                      Je m’adapte aux spécificités de votre sport.
+                    </strong>{" "}
+                    J’en comprends les règles et les enjeux.
+                  </>
+                ),
               },
               {
-                title: "Définir un cadre",
                 icon: (
                   <Handshake
                     className="w-20 h-20 text-accent"
                     strokeWidth={1}
                   />
                 ),
-                desc: "Mettre en place un accompagnement structuré, personnalisé, en accord avec vos valeurs.",
+                desc: (
+                  <>
+                    <strong>J’écoute et analyse les difficultés</strong> que
+                    vous rencontrez = <strong>votre état présent</strong>. Je
+                    réalise des <strong>entretiens semi directifs</strong> pour
+                    aborder et comprendre votre réalité dans les sphères{" "}
+                    <strong>personnelles</strong>,{" "}
+                    <strong>
+                      professionnelles / scolaires / universitaires
+                    </strong>{" "}
+                    et <strong>sportives</strong>.
+                  </>
+                ),
               },
               {
-                title: "Explorer vos ressources",
                 icon: (
                   <BicepsFlexed
                     className="w-20 h-20 text-accent"
                     strokeWidth={1}
                   />
                 ),
-                desc: "Identifier vos points forts, vos freins, et faire émerger votre potentiel.",
+                desc: (
+                  <>
+                    Je propose <strong>toute une gamme de tests</strong> qui
+                    analyseront avec précision vos <strong>habiletés</strong> à
+                    l’entrainement comme en compétition.
+                  </>
+                ),
               },
               {
-                title: "Mettre en mouvement",
                 icon: (
                   <ChevronsRight
                     className="w-20 h-20 text-accent"
                     strokeWidth={1}
                   />
                 ),
-                desc: "Co-construire des rituels, des stratégies, des mises en action concrètes.",
+                desc: (
+                  <>
+                    Je fixe avec vous <strong>votre objectif global</strong> ={" "}
+                    <strong>votre état désiré</strong>. Je définis et propose
+                    les <strong>outils</strong> pour renforcer et développer les{" "}
+                    <strong>capacités mentales</strong> à acquérir.
+                  </>
+                ),
               },
               {
-                title: "Évaluer et ajuster",
                 icon: (
                   <RefreshCcw
                     className="w-20 h-20 text-accent"
                     strokeWidth={1}
                   />
                 ),
-                desc: "Analyser les effets, capitaliser sur les progrès et ajuster en continu.",
+                desc: (
+                  <>
+                    J’établis un <strong>plan d’action</strong> reposant sur des{" "}
+                    <strong>séances d’accompagnement régulières</strong>.
+                  </>
+                ),
               },
             ].map((step, index) => (
               <SwiperSlide key={index}>
-                <div className="relative border border-2 border-gray-300 rounded-xl bg-background bigshadow p-6 min-h-[400px] flex flex-col text-center">
+                <div className="relative rounded-xl bg-white  p-6 min-h-[500px] shadow-lg flex flex-col text-center">
                   <div className="w-full flex items-center text-center justify-center w-24 h-24 mb-4">
                     {step.icon}
                   </div>
                   <span className="text-6xl w-full text-center  px-3 py-1 font-extrabold">
                     {index + 1}
                   </span>
-
-                  <h3 className="text-xl font-extrabold font-serif mb-4">
-                    {step.title}
-                  </h3>
                   <p>{step.desc}</p>
                 </div>
               </SwiperSlide>
@@ -309,42 +337,42 @@ export default function ApprochePage() {
               <br />
               <strong>L’essentiel est de faire sens !</strong>
             </p>
-            
-  <div className="flex flex-col md:flex-row md:gap-12">
-    {/* Colonne de gauche */}
-    <div className="flex-1 space-y-3">
-      {[
-        "Fixation d’objectifs",
-        "Dialogue interne",
-        "Relaxation",
-        "Imagerie mentale",
-        "Méditation",
-        "Contrôle respiratoire",
-      ].map((item, index) => (
-        <div key={index} className="flex items-center gap-3">
-          <Check className="w-5 h-5 text-accent" />
-          <span>{item}</span>
-        </div>
-      ))}
-    </div>
 
-    {/* Colonne de droite */}
-    <div className="flex-1 space-y-3 mt-6 md:mt-0">
-      {[
-        "Switch",
-        "Routines de performance",
-        "Coaching de vie",
-        "Communication non verbale",
-        "DISC",
-        "Rythmes biologiques",
-      ].map((item, index) => (
-        <div key={index} className="flex items-center gap-3">
-          <Check className="w-5 h-5 text-accent" />
-          <span>{item}</span>
-        </div>
-      ))}
-    </div>
-  </div>
+            <div className="flex flex-col md:flex-row md:gap-12">
+              {/* Colonne de gauche */}
+              <div className="flex-1 space-y-3">
+                {[
+                  "Fixation d’objectifs",
+                  "Dialogue interne",
+                  "Relaxation",
+                  "Imagerie mentale",
+                  "Méditation",
+                  "Contrôle respiratoire",
+                ].map((item, index) => (
+                  <div key={index} className="flex items-center gap-3">
+                    <Check className="w-5 h-5 text-accent" />
+                    <span>{item}</span>
+                  </div>
+                ))}
+              </div>
+
+              {/* Colonne de droite */}
+              <div className="flex-1 space-y-3 mt-6 md:mt-0">
+                {[
+                  "Switch",
+                  "Routines de performance",
+                  "Coaching de vie",
+                  "Communication non verbale",
+                  "DISC",
+                  "Rythmes biologiques",
+                ].map((item, index) => (
+                  <div key={index} className="flex items-center gap-3">
+                    <Check className="w-5 h-5 text-accent" />
+                    <span>{item}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
           <div className="md:w-1/2">
             <div className="relative w-full min-h-[400px] aspect-[9/11] rounded-lg overflow-hidden bigshadow">

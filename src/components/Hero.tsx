@@ -11,7 +11,7 @@ export default function Hero() {
   return (
     <section className="w-full flex flex-col md:flex-row items-center gap-16 pt-8 pb-16 container mx-auto ">
       {/* Image côté gauche */}
-      <div className="relative w-full md:w-1/3 h-80 md:h-[500px] rounded-xl bigshadow overflow-hidden">
+      <div className="relative w-full md:w-1/3 h-80 md:h-[500px] rounded-xl shadow-xl overflow-hidden">
         <Image
           src="/images/benoit3.webp"
           alt="Benoît Vasse"
@@ -39,7 +39,7 @@ export default function Hero() {
     <Link
       key={link.href}
       href={link.href}
-      className=" font-serif bg-[#FFF9C7] italic underline underline-offset-2 hover:text-primary transition rouge font-semibold"
+      className=" font-serif italic underline underline-offset-2 hover:text-primary px-1 transition rouge font-bold"
     >
       {link.label}
     </Link>
