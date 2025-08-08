@@ -27,7 +27,7 @@ export default async function HomePage() {
 
       {/* Section Témoignages */}
       <AnimatedSection>
-        <section className="container mx-auto py-20 px-8 rounded-xl bg-[#1F344F]">
+        <section className="container mx-auto py-20 px-8 rounded-xl bg-background-navi">
           <p className="font-serif italic text-center text-2xl jaune mb-4">
 "Chaque rendez-vous apportait quelque chose de nouveau,<br/>ce qui permettait
 une vraie progression."</p>

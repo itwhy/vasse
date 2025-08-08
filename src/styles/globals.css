@@ -115,19 +115,31 @@
   --sidebar-ring: oklch(0.556 0 0);
 }
 .bg-background {
-  background-color: #EDF0F7;
+  background: linear-gradient(45deg, #b1c5eb, #dae3f8);
+}
+.bg-background-navi {
+  background: linear-gradient(45deg, #1a2b43, #203553);
 }
 .bg-navi {
-  background-color: #1F344F;
+  background: linear-gradient(45deg, #1a2b43, #94b2da);
 }
 .jaune{
   color: #FFF9C7;
+}
+.bleu{
+  color: #8DA5D1;
 }
 .rouge{
   color: #E20030;
 }
 .bg-link{
   background-color: #8DA5D1;
+}
+.bg-jaune{
+  background-color: #FFF9C7;
+}
+.bg-rouge{
+  background-color: #E20030;
 }
 .temoignage-content > p{
   margin-bottom: 1.5rem;

@@ -105,8 +105,8 @@ export default function ApprochePage() {
       </section>
 
       {/* SECTION 2 — Convictions */}
-      <section id="convictions">
-        <h2 className="text-5xl font-serif font-extrabold text-center mb-8 mx-auto leading-tight">
+      <section id="convictions" className="bg-background-navi p-16 rounded-xl">
+        <h2 className="text-5xl jaune font-serif font-extrabold text-center mb-8 mx-auto leading-tight">
           Mes convictions
         </h2>
         <div className="w-24 mx-auto mb-6 mt-4">
@@ -157,12 +157,12 @@ export default function ApprochePage() {
                 index % 2 !== 0 ? "md:flex-row-reverse" : ""
               } items-start`}
             >
-              <div className="md:w-3/4  p-6 rounded-xl bg-white">
-                <h3 className="text-xl font-extrabold mb-2">{item.title}</h3>
-                <p className="font-serif italic font-extrabold text-lg text-accent mb-4">
+              <div className="md:w-3/4  p-6 rounded-xl border-2 border-accent shadow-lg">
+                <h3 className="text-xl jaune font-extrabold mb-2">{item.title}</h3>
+                <p className="font-serif italic font-extrabold text-lg text-white mb-4">
                   {item.quote}
                 </p>
-                <p>{item.text}</p>
+                <p className="text-white">{item.text}</p>
               </div>
               <div className="md:w-1/4"></div>
             </div>
