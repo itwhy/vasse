@@ -5,12 +5,12 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 
 import {
-  MessagesSquare,
+  UserSearch,
+  Trophy,
+  Target,
+  CalendarCheck,
+  BarChart3,
   Check,
-  Handshake,
-  BicepsFlexed,
-  ChevronsRight,
-  RefreshCcw,
 } from "lucide-react";
 import "swiper/css";
 
@@ -205,90 +205,86 @@ export default function ApprochePage() {
           >
             {[
               {
-                icon: (
-                  <MessagesSquare
-                    className="w-20 h-20 text-accent"
-                    strokeWidth={1}
-                  />
-                ),
-                desc: (
-                  <>
-                    <strong>
-                      Je m’adapte aux spécificités de votre sport.
-                    </strong>{" "}
-                    J’en comprends les règles et les enjeux.
-                  </>
-                ),
-              },
-              {
-                icon: (
-                  <Handshake
-                    className="w-20 h-20 text-accent"
-                    strokeWidth={1}
-                  />
-                ),
-                desc: (
-                  <>
-                    <strong>J’écoute et analyse les difficultés</strong> que
-                    vous rencontrez = <strong>votre état présent</strong>. Je
-                    réalise des <strong>entretiens semi directifs</strong> pour
-                    aborder et comprendre votre réalité dans les sphères{" "}
-                    <strong>personnelles</strong>,{" "}
-                    <strong>
-                      professionnelles / scolaires / universitaires
-                    </strong>{" "}
-                    et <strong>sportives</strong>.
-                  </>
-                ),
-              },
-              {
-                icon: (
-                  <BicepsFlexed
-                    className="w-20 h-20 text-accent"
-                    strokeWidth={1}
-                  />
-                ),
-                desc: (
-                  <>
-                    Je propose <strong>toute une gamme de tests</strong> qui
-                    analyseront avec précision vos <strong>habiletés</strong> à
-                    l’entrainement comme en compétition.
-                  </>
-                ),
-              },
-              {
-                icon: (
-                  <ChevronsRight
-                    className="w-20 h-20 text-accent"
-                    strokeWidth={1}
-                  />
-                ),
-                desc: (
-                  <>
-                    Je fixe avec vous <strong>votre objectif global</strong> ={" "}
-                    <strong>votre état désiré</strong>. Je définis et propose
-                    les <strong>outils</strong> pour renforcer et développer les{" "}
-                    <strong>capacités mentales</strong> à acquérir.
-                  </>
-                ),
-              },
-              {
-                icon: (
-                  <RefreshCcw
-                    className="w-20 h-20 text-accent"
-                    strokeWidth={1}
-                  />
-                ),
-                desc: (
-                  <>
-                    J’établis un <strong>plan d’action</strong> reposant sur des{" "}
-                    <strong>séances d’accompagnement régulières</strong>.
-                  </>
-                ),
-              },
+  icon: (
+    <Trophy
+      className="w-20 h-20 text-accent"
+      strokeWidth={1}
+    />
+  ),
+  desc: (
+    <>
+      <strong>Je m’adapte aux spécificités de votre sport.</strong>{" "}
+      J’en comprends les règles et les enjeux.
+    </>
+  ),
+},
+{
+  icon: (
+    <UserSearch
+      className="w-20 h-20 text-accent"
+      strokeWidth={1}
+    />
+  ),
+  desc: (
+    <>
+      <strong>J’écoute et analyse les difficultés</strong> que
+      vous rencontrez = <strong>votre état présent</strong>. Je
+      réalise des <strong>entretiens semi directifs</strong> pour
+      aborder et comprendre votre réalité dans les sphères{" "}
+      <strong>personnelles</strong>,{" "}
+      <strong>professionnelles / scolaires / universitaires</strong>{" "}
+      et <strong>sportives</strong>.
+    </>
+  ),
+},
+{
+  icon: (
+    <BarChart3
+      className="w-20 h-20 text-accent"
+      strokeWidth={1}
+    />
+  ),
+  desc: (
+    <>
+      Je propose <strong>toute une gamme de tests</strong> qui
+      analyseront avec précision vos <strong>habiletés</strong> à
+      l’entrainement comme en compétition.
+    </>
+  ),
+},
+{
+  icon: (
+    <Target
+      className="w-20 h-20 text-accent"
+      strokeWidth={1}
+    />
+  ),
+  desc: (
+    <>
+      Je fixe avec vous <strong>votre objectif global</strong> ={" "}
+      <strong>votre état désiré</strong>. Je définis et propose
+      les <strong>outils</strong> pour renforcer et développer les{" "}
+      <strong>capacités mentales</strong> à acquérir.
+    </>
+  ),
+},
+{
+  icon: (
+    <CalendarCheck
+      className="w-20 h-20 text-accent"
+      strokeWidth={1}
+    />
+  ),
+  desc: (
+    <>
+      J’établis un <strong>plan d’action</strong> reposant sur des{" "}
+      <strong>séances d’accompagnement régulières</strong>.
+    </>
+  ),
+},
             ].map((step, index) => (
               <SwiperSlide key={index}>
-                <div className="relative rounded-xl bg-white  p-6 min-h-[500px] shadow-lg flex flex-col text-center">
+                <div className="relative rounded-xl bg-white/70  p-6 min-h-[500px] shadow-lg flex flex-col text-center">
                   <div className="w-full flex items-center text-center justify-center w-24 h-24 mb-4">
                     {step.icon}
                   </div>
