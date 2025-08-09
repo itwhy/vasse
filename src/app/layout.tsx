@@ -47,6 +47,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body suppressHydrationWarning className={`${notoSans.variable} ${playfair.variable} ${amatic.variable} flex flex-col min-h-screen bg-background`}>
         <Header />
         <main className="flex-1 container mx-auto px-2">{children}</main>
+
         <Footer />
       </body>
     </html>

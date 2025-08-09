@@ -3,6 +3,7 @@ import Script from "next/script";
 import { ArrowDown, HeartHandshake, Leaf, Compass, Laugh } from "lucide-react";
 
 export const metadata = {
+  metadataBase: new URL("https://benoitvasse.com"),
   title: "Qui suis‑je ? – Benoît Vasse, coach professionnel & préparateur mental",
   description:
     "Coach professionnel certifié (RNCP) et préparateur mental diplômé (DU Lille – STAPS). Parcours, diplômes, valeurs et posture d’accompagnement.",
@@ -119,9 +120,9 @@ export default function AProposPage() {
         {/* Image + chapeau */}
         <div className="flex flex-col md:flex-row-reverse items-center gap-16">
           <div className="md:w-1/2">
-            <div className="relative w-full min-h-[300px] aspect-[9/9] rounded-lg overflow-hidden shadow-xl">
+            <div className="relative w-full min-h-[300px] aspect-[12/9] rounded-lg overflow-hidden shadow-xl">
               <Image
-                src="/images/benoit-vasse-preparateur-mental-lille2.webp"
+                src="/images/benoit-5.webp"
                 alt="Benoît Vasse, coach professionnel et préparateur mental à Lille"
                 fill
                 className="object-cover"
@@ -133,11 +134,11 @@ export default function AProposPage() {
             <p className="mb-4">
               Je m’appelle <strong>Benoît VASSE</strong> – Coach professionnel certifié et{" "}
               <strong>Préparateur Mental</strong> diplômé. Je suis le fondateur et le gérant de{" "}
-              <strong>vassecommunicant</strong>.
+              <strong><a href="https://vassecommunicant.fr" className="text-accent">vassecommunicant</a></strong>.
             </p>
             <p>
-              Accompagner un athlète ou une équipe, c’est d’abord <strong>bien communiquer</strong>,
-              écouter, puis trouver le bon canal pour<strong> faire alliance</strong>. C’est être à la fois
+              Accompagner un athlète ou une équipe, c’est d’abord <strong>bien communiquer,
+              bien écouter</strong>, puis trouver le bon canal pour<strong> faire alliance</strong>. C’est être à la fois
               en posture d’émetteur et de récepteur. Bien se comprendre est la première garantie d’une{" "}
               <strong>confiance mutuelle</strong>.
             </p>
@@ -295,17 +296,18 @@ export default function AProposPage() {
           <div className="md:w-1/2 prose prose-lg max-w-none text-gray-900">
             <p>
               La force de mon savoir-faire, c’est d’associer <strong>trois postures</strong> : celle du{" "}
-              <strong>communicant expérimenté</strong>, celle du <strong>coach professionnel certifié</strong>, et celle du{" "}
+              <strong>communicant expérimenté</strong>, celle du <strong>coach professionnel certifié</strong>,et <br /> celle du{" "}
               <strong>préparateur mental diplômé</strong>.
             </p>
-            <p>
+            <p className="mt-4">
               Je peux m’appuyer sur une longue expérience de communicant pour des{" "}
               <strong>grands groupes nationaux</strong>. Collaborer avec un athlète, c’est aussi faire preuve de{" "}
               <strong>psychologie</strong> : s’intéresser à sa personnalité et à sa singularité, appréhender les sphères
-              professionnelle/scolaire et personnelle, <strong>comprendre ses valeurs et ses croyances</strong>. Mes postures
+              professionnelle/scolaire et personnelle, <strong>comprendre ses valeurs et ses croyances</strong>. 
+              </p><p className="mt-4">Mes postures
               actuelles en <em>executive coach</em> et <em>life coaching</em> renforcent cette compréhension de l’humain.
             </p>
-            <p>
+            <p className="mt-4">
               Conseiller sur les habiletés mentales demande une{" "}
               <strong>connaissance solide de la pratique sportive</strong>. Maîtriser <strong>outils</strong> et{" "}
               <strong>techniques</strong> au service de la performance est indispensable. Travailler avec le haut niveau, préparer et

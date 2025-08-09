@@ -39,7 +39,7 @@ export default function Hero() {
     <Link
       key={link.href}
       href={link.href}
-      className="w-fit bg-link uppercase text-base text-white shadow-lg rounded-full py-1 px-4 font-sans hover:jaune transition  flex items-center gap-2"
+      className="w-fit bg-link uppercase text-[0.9rem] text-white shadow-lg/5 rounded-full py-1 px-4 font-sans hover:jaune transition  flex items-center gap-2"
     >
       {link.label}<ArrowRight className="w-4 h-4" />
     </Link>

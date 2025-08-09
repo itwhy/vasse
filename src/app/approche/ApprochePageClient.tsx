@@ -2,8 +2,8 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper/modules";
 import {
   UserSearch,
   Trophy,
@@ -49,7 +49,7 @@ export default function ApprochePageClient() {
 
           <div className="md:w-1/2 prose prose-lg max-w-none text-gray-900">
             <h3 className="text-xl font-extrabold mb-4">
-              Points forts – Plaisir – Performance :
+              Points forts<br />Plaisir<br />Performance :
               <br />Le chemin de la réussite
             </h3>
             <p className="mb-4">
@@ -65,17 +65,17 @@ export default function ApprochePageClient() {
             </p>
 
             <p className="mt-4 font-bold">Découvrez :</p>
-            <div className="flex flex-wrap gap-4 mb-8 font-bold">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className="font-serif font-bold italic underline underline-offset-2 hover:text-primary transition rouge"
-                >
-                  {link.label}
-                </Link>
-              ))}
-            </div>
+                        <div className="flex flex-col gap-4 mt-2 font-bold">
+  {navLinks.map((link) => (
+    <Link
+      key={link.href}
+      href={link.href}
+      className="w-fit bg-link text-[0.9rem] text-white shadow-lg/5 rounded-full py-1 px-4 font-sans hover:jaune transition  flex items-center gap-2"
+    >
+      {link.label}<ArrowRight className="w-4 h-4" />
+    </Link>
+  ))}
+</div>
           </div>
         </div>
       </section>
@@ -92,8 +92,9 @@ export default function ApprochePageClient() {
             {
               title: "LE MOTEUR, C’EST L’ENVIE",
               quote: "« Vouloir c’est pouvoir ».",
-              text:
-                "Pour qu’il y ait accompagnement, il faut une demande explicite. Avoir envie de s’en donner les moyens pour progresser est essentiel. C’est la condition sine qua non de la réussite du projet.",
+              text:(<>
+                "Pour qu’il y ait accompagnement, il faut une demande explicite<br />Avoir envie de s’en donner les moyens pour progresser est essentiel. C’est la condition sine qua non de la réussite du projet.",
+                </>),
             },
             {
               title: "LA DISCIPLINE COMME GUIDE",
@@ -109,7 +110,7 @@ export default function ApprochePageClient() {
             },
             {
               title: "RIEN N’EST DÉFINITIF",
-              quote: "Changer : oui peut-être ? Évoluer : oui sûrement !",
+              quote: "Changer : oui peut-être ? -  Évoluer : oui sûrement !",
               text:
                 "Je crois à la politique des petits pas et à la puissance des feedbacks pour s’extraire d’une situation qui paraissait définitive.",
             },
@@ -146,7 +147,7 @@ export default function ApprochePageClient() {
               </h2>
               <h3 className="text-center mb-8 mx-auto">
                 Chaque accompagnement est unique. Voici les grandes étapes que nous
-                suivrons ensemble pour construire un travail sur mesure, adapté à
+                suivrons ensemble pour construire un travail sur mesure,<br />adapté à
                 votre discipline, votre réalité et vos objectifs.
               </h3>
               <div className="w-24 mx-auto">
@@ -197,7 +198,7 @@ export default function ApprochePageClient() {
         desc: (
           <>
             <strong>J’écoute et analyse les difficultés</strong> que
-            vous rencontrez = <strong>votre état présent</strong>. Je
+            vous rencontrez = <strong>votre état présent</strong>.<br />Je
             réalise des <strong>entretiens semi directifs</strong> pour
             aborder et comprendre votre réalité dans les sphères{" "}
             <strong>personnelles</strong>,{" "}
@@ -318,8 +319,8 @@ export default function ApprochePageClient() {
           </div>
 
           <div className="md:w-1/2">
-            <div className="relative w-full min-h-[400px] aspect-[9/11] rounded-lg overflow-hidden bigshadow">
-              <Image src="/images/benoit-outils.webp" alt="Outils de préparation mentale" fill className="object-cover" />
+            <div className="relative w-full min-h-[400px] aspect-[9/9] rounded-lg overflow-hidden bigshadow">
+              <Image src="/images/benoit-4.webp" alt="Outils de préparation mentale" fill className="object-cover" />
             </div>
           </div>
         </div>

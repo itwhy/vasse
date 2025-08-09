@@ -45,7 +45,7 @@ export default function Header() {
               isScrolled ? 'text-xl' : 'text-2xl md:text-3xl'
             }`}
           >
-            Benoît<br />VASSE
+            Benoît<br />Vasse
           </span>
         </Link>
 

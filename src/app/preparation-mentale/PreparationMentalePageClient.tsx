@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { ArrowRight } from "lucide-react";
 import "swiper/css";
 import { Brain, Target, Activity } from "lucide-react";
 
@@ -24,8 +25,8 @@ export default function PreparationMentalePageClient() {
           <h2 className="text-5xl font-serif font-extrabold max-w-2xl mx-auto leading-tight">
             « Quand tu auras désappris à espérer, je t’apprendrai à vouloir »
           </h2>
-        <p className="mt-2 text-gray-500">Sénèque</p>
-          <div className="w-24 mx-auto mb-6 mt-4">
+            <p className="mt-2 text-gray-500 mx-auto">Sénèque</p>
+          <div className="w-12 mx-auto mb-6 mt-4">
             <Image
               src="/images/logo.png"
               alt="Logo Benoît Vasse"
@@ -40,7 +41,7 @@ export default function PreparationMentalePageClient() {
           <div className="md:w-1/2">
             <div className="relative w-full min-h-[400px] aspect-[9/11] rounded-lg overflow-hidden bigshadow">
               <Image
-                src="/images/preparation-mentale-1.webp"
+                src="/images/benoit-3.webp"
                 alt="Athlète en préparation mentale"
                 fill
                 className="object-cover"
@@ -53,9 +54,9 @@ export default function PreparationMentalePageClient() {
               Pourquoi faire appel à un préparateur mental ?
             </h3>
             <p className="mb-4">
-              Parce que l’on a « trop de … » … ou à l’inverse « pas assez de … ». Parce que tout seul on a essayé … et on n’y arrive toujours pas !
+              Parce que l’on a « trop de … »,<br /> ou à l’inverse « pas assez de … ».<br />Parce que tout seul on a essayé … et on n’y arrive toujours pas !
             </p>
-            <p className="mb-4">
+            <p className="mb-4 text-justify">
               Manque de motivation – Blessures répétitives – Estime de soi en baisse – Agacements intempestifs –
               Peur de ne pas y arriver – Perte de confiance – Envie de tout envoyer balader – Perte de repères –
               Mauvaise gestion du stress – Manque de concentration – Difficulté à se fixer des objectifs clairs –
@@ -64,17 +65,17 @@ export default function PreparationMentalePageClient() {
             </p>
 
             <p className="mt-4 font-bold">Découvrez :</p>
-            <div className="flex flex-wrap gap-4 mb-8 font-bold">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className="font-serif italic underline underline-offset-2 hover:text-primary transition rouge font-bold"
-                >
-                  {link.label}
-                </Link>
-              ))}
-            </div>
+            <div className="flex flex-col gap-4 mt-2 font-bold">
+  {navLinks.map((link) => (
+    <Link
+      key={link.href}
+      href={link.href}
+      className="w-fit bg-link text-[0.9rem] text-white shadow-lg/5 rounded-full py-1 px-4 font-sans hover:jaune transition  flex items-center gap-2"
+    >
+      {link.label}<ArrowRight className="w-4 h-4" />
+    </Link>
+  ))}
+</div>
           </div>
         </div>
       </section>
@@ -152,8 +153,8 @@ export default function PreparationMentalePageClient() {
           </div>
           <p className="max-w-3xl mx-auto text-gray-900">
             Historiquement, elle s’adresse aux <strong>militaires</strong> et aux <strong>athlètes de haut niveau</strong>.
-            Aujourd’hui, elle concerne aussi les <strong>sportifs amateurs</strong>, les <strong>dirigeants</strong>, les <strong>cadres</strong>, les
-            <strong> étudiants</strong> (concours/examens) et les <strong>artistes</strong> souhaitant progresser et atteindre leurs objectifs.
+            <br />Aujourd’hui, elle concerne aussi les <strong>sportifs amateurs</strong>, les <strong>dirigeants</strong>, les <strong>cadres</strong>, les
+            <strong> étudiants</strong> (concours/examens) <strong>et toutes les personnes</strong> souhaitant progresser et atteindre leurs objectifs.
           </p>
         </div>
 
