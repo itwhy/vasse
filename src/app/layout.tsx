@@ -24,6 +24,8 @@ export const amatic = Amatic_SC({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://benoitvasse.com'),
+
   title: 'Benoît Vasse – Préparateur Mental',
   description:
     'Préparateur mental diplômé et coach certifié. Accompagnement des sportifs de haut niveau et dirigeants vers la performance durable.',
@@ -31,8 +33,8 @@ export const metadata: Metadata = {
     title: 'Benoît Vasse – Préparateur Mental',
     description:
       'Préparateur mental diplômé et coach certifié. Accompagnement des sportifs de haut niveau et dirigeants vers la performance durable.',
-    url: 'https://benoit-vasse.fr',
-    siteName: 'Benoît Vasse',
+    url: 'https://benoitvasse.com',
+    siteName: 'Benoît Vasse - Préparateur Mental & Coach Professionnel',
     type: 'website',
   },
   twitter: {

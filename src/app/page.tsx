@@ -10,8 +10,38 @@ import { promises as fs } from 'fs';
 
 export const metadata = {
   title: 'Accueil – Benoît Vasse',
-  description:
-    'Préparateur mental diplômé et coach certifié. Découvrez mon approche et mon parcours.',
+  description: 'Préparateur mental diplômé et coach certifié à Lille et partout en France. Découvrez mon approche, mes outils et des témoignages d’athlètes.',
+  alternates: { canonical: '/' },
+  openGraph: {
+    title: 'Benoît Vasse – Préparateur mental & Coach professionnel',
+    description: 'Préparateur mental diplômé et coach certifié. Découvrez mon approche et mon parcours.',
+    url: 'https://benoit.vassecommunicant.fr/',
+    siteName: 'Benoît Vasse',
+    locale: 'fr_FR',
+    type: 'website',
+    images: [
+      {
+        url: '/images/benoit-vasse-preparateur-mental-3.webp', // << place ton image ici (1200x630 conseillé)
+        width: 1200,
+        height: 630,
+        alt: 'Benoît Vasse – Préparateur mental & Coach professionnel',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Benoît Vasse – Préparateur mental & Coach professionnel',
+    description: 'Préparateur mental diplômé et coach certifié. Découvrez mon approche et mon parcours.',
+    images: ['/images/benoit-vasse-preparateur-mental-3.webp'],
+  },
+  robots: { index: true, follow: true },
+  keywords: [
+    'préparateur mental Lille',
+    'coach professionnel',
+    'préparation mentale',
+    'coaching sportif',
+    'accompagnement performance',
+  ],
 };
 
 async function getTemoignages(): Promise<Temoin[]> {
