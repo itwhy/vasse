@@ -65,7 +65,7 @@ export default async function HomePage() {
 une vraie progression."</p>
 <p className="text-center text-gray-200 mb-12">Sarah Toulemonde – Cavalière saut d’obstacle</p>
           <h2 className="text-4xl font-serif font-extrabold jaune text-center mb-8">
-            Ils/Elles m’ont fait confiance <br /> vous en parlent
+            Ils/Elles m’ont fait confiance <br />et vous en parlent
           </h2>
 
           {/* 3 cartes témoignages */}
