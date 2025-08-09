@@ -29,7 +29,7 @@ export default function Hero() {
           Préparez votre esprit,<br /> atteignez vos objectifs
         </h1>
         <p className="mb-4 max-w-xl">
-          Je suis <strong>Coach professionnel certifié</strong> et <strong>Préparateur Mental diplômé</strong>.<br/>Je m'appelle Benoît Vasse et j’accompagne les athlètes vers le bien-être la performance durable.
+          Je suis <strong>Coach professionnel certifié</strong> et <strong>Préparateur Mental diplômé</strong>.<br/>Je m'appelle Benoît Vasse et j’accompagne les athlètes vers le bien-être et la performance durable.
         </p>
 
         {/* Liens menu */}
