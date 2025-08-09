@@ -154,7 +154,7 @@ export default function PreparationMentalePageClient() {
           <p className="max-w-3xl mx-auto text-gray-900">
             Historiquement, elle s’adresse aux <strong>militaires</strong> et aux <strong>athlètes de haut niveau</strong>.
             <br />Aujourd’hui, elle concerne aussi les <strong>sportifs amateurs</strong>, les <strong>dirigeants</strong>, les <strong>cadres</strong>, les
-            <strong> étudiants</strong> (concours/examens) <strong>et toutes les personnes</strong> souhaitant progresser et atteindre leurs objectifs.
+            <strong> étudiants</strong> (concours/examens) <strong>et toutes les personnes</strong> souhaitant améliorer leurs pratiques et atteindre leurs objectifs.
           </p>
         </div>
 

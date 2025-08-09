@@ -295,8 +295,8 @@ export default function AProposPage() {
 
           <div className="md:w-1/2 prose prose-lg max-w-none text-gray-900">
             <p>
-              La force de mon savoir-faire, c’est d’associer <strong>trois postures</strong> : celle du{" "}
-              <strong>communicant expérimenté</strong>, celle du <strong>coach professionnel certifié</strong>,et <br /> celle du{" "}
+              La force de mon savoir-faire, c’est d’associer <strong>trois postures</strong> :<br /> celle du{" "}
+              <strong>communicant expérimenté</strong>,<br />celle du <strong>coach professionnel certifié</strong>, <br />et celle du{" "}
               <strong>préparateur mental diplômé</strong>.
             </p>
             <p className="mt-4">

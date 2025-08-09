@@ -146,9 +146,9 @@ export default function ApprochePageClient() {
                 Comment va se passer notre collaboration ?
               </h2>
               <h3 className="text-center mb-8 mx-auto">
-                Chaque accompagnement est unique. Voici les grandes étapes que nous
+                Chaque accompagnement est unique.<br />Voici les grandes étapes que nous
                 suivrons ensemble pour construire un travail sur mesure,<br />adapté à
-                votre discipline, votre réalité et vos objectifs.
+                votre discipline, à votre réalité et à vos objectifs.
               </h3>
               <div className="w-24 mx-auto">
                 <Image
