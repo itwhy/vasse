@@ -18,7 +18,7 @@ export async function POST(req: Request) {
 
   const emailData = new SendSmtpEmail();
   emailData.sender = { name: 'Benoît Vasse', email: 'benoit@vassecommunicant.com' };
-  emailData.to = [{ email: 'mathieumalisani@gmail.com', name: 'Benoît Vasse' }];
+  emailData.to = [{ email: 'benoitvasse@yahoo.fr', name: 'Benoît Vasse' }];
   emailData.replyTo = { email, name: nom };
   emailData.subject = 'Nouveau message depuis le formulaire de contact';
   emailData.htmlContent = `<p><strong>Nom :</strong> ${nom}</p><p><strong>Email :</strong> ${email}</p><p><strong>Téléphone :</strong> ${phone}</p><p><strong>Message :</strong><br/>${message}</p>`;
