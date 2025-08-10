@@ -49,7 +49,7 @@ export const metadata = {
 
 export default function AProposPage() {
   return (
-    <div className="container mx-auto py-16 px-2">
+    <div className="container mx-auto py-12 px-2">
       {/* JSON-LD Person */}
       <Script id="ld-person" type="application/ld+json">
         {JSON.stringify({
