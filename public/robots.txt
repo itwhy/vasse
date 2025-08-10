@@ -6,4 +6,4 @@ Allow: /
 Host: https://benoitvasse.com
 
 # Sitemaps
-Sitemap: https://benoitvasse.com/sitemap.xml
+Sitemap: https://benoitvasse.com/sitemap-0.xml

@@ -15,7 +15,7 @@ export const metadata = {
   openGraph: {
     title: 'Benoît Vasse – Préparateur mental & Coach professionnel',
     description: 'Préparateur mental diplômé et coach certifié. Découvrez mon approche et mon parcours.',
-    url: 'https://benoit.vassecommunicant.fr/',
+    url: 'https://benoitvasse.com/',
     siteName: 'Benoît Vasse',
     locale: 'fr_FR',
     type: 'website',
