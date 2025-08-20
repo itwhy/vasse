@@ -12,10 +12,20 @@ export const metadata: Metadata = {
       "Ma méthode : révéler les points forts, installer le plaisir et construire une performance durable.",
     url: "/approche",
     type: "article",
+    images: [
+      {
+        url: "/images/benoit-vasse-preparateur-approche.webp",
+        width: 1200,
+        height: 630,
+        alt: "Benoît Vasse – Coach professionnel & préparateur mental",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Mon approche terrain",
+    images: ["images/benoit-vasse-preparateur-approche.webp"],
+
     description:
       "Ma méthode : points forts, plaisir, performance — pour une progression durable.",
   },

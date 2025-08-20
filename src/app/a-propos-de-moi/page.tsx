@@ -28,7 +28,7 @@ export const metadata = {
     type: "profile",
     images: [
       {
-        url: "/images/og/benoit-vasse-preparateur-mental.jpg",
+        url: "/images/benoit-5.webp",
         width: 1200,
         height: 630,
         alt: "Benoît Vasse – Coach professionnel & préparateur mental",
@@ -40,7 +40,7 @@ export const metadata = {
     title: "Qui suis‑je ? – Benoît Vasse",
     description:
       "Coach professionnel certifié et préparateur mental diplômé. Parcours, diplômes, valeurs et posture.",
-    images: ["/images/og/benoit-vasse-preparateur-mental.jpg"],
+    images: ["/images/benoit-5.webp"],
   },
   robots: {
     index: true,
