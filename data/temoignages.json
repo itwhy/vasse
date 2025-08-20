@@ -32,7 +32,7 @@
     "sport": "Interne en médecine",
     "description": "description",
     "quote": "Cela m’a redonné le coup de boost et de soutien dont j’avais besoin.",
-    "contenu": "<p><strong>J'ai fait appel à Ben au cours de la 6ème année de médecine à un moment où je commençais à perdre ma motivation et à moins croire en mes capacités.</strong> Il m'a fait découvrir sa méthode associant la <strong>routine</strong>, celle qui te permet de trouver ton rythme et ton équilibre; la <strong>bonne rigueur</strong>, celle qui est indispensable pour aller au bout de ses objectifs; et surtout la <strong>cohérence cardiaque</strong>, un outil qui permet de se recentrer et de respirer en pleine conscience. Il m'a ainsi accompagné jusqu'au concours et m'a redonné le coup de boost et de soutien dont j'avais besoin. Je n'hésiterai pas à refaire appel à lui dans de futurs projets que cela concerne le sport, les études, le travail ou à certains moments de vie. Étant un grand fan de tennis, il n'hésitera pas à faire référence à Roland-Garros pour vous expliquer ses propos ;). J'ai été en totale confiance avec lui, merci Ben !</p>",
+    "contenu": "<p><strong>J'ai fait appel à Ben au cours de la 6ème année de médecine</strong> à un moment où je commençais à perdre ma motivation et à moins croire en mes capacités.</p><p>Il m'a fait découvrir sa méthode associant la <strong>routine</strong>, celle qui te permet de trouver ton rythme et ton équilibre; La <strong>bonne rigueur</strong>, celle qui est indispensable pour aller au bout de ses objectifs; Et surtout la <strong>cohérence cardiaque</strong>, un outil qui permet de se recentrer et de respirer en pleine conscience.</p><p><strong>Il m'a ainsi accompagné jusqu'au concours et m'a redonné le coup de boost et de soutien dont j'avais besoin.</strong></p><p><strong>Je n'hésiterai pas à refaire appel à lui dans de futurs projets</strong> que cela concerne le sport, les études, le travail ou à certains moments de vie.</p><p>Étant un grand fan de tennis, il n'hésitera pas à faire référence à Roland-Garros pour vous expliquer ses propos ;). J'ai été en totale confiance avec lui, <strong>merci Ben !</strong></p>",
     "photo": "/images/temoignages/fanny2.webp"
   },
   {
@@ -40,9 +40,18 @@
     "nom": "Matéo Colsenet",
     "sport": "BMX, vice champion du Monde",
     "description": "description",
-    "quote": "",
-    "contenu": "<p>Pour bienôt ;)",
+    "quote": "J’ai découvert une nouvelle approche de la préparation, complémentaire au travail physique et technique que l’on fait au quotidien.",
+    "contenu": "<p>J’ai eu l’occasion de travailler avec <strong>Benoît au début de son parcours de préparateur mental</strong>.<br>C’était une expérience intéressante car j’ai découvert une <strong>nouvelle approche de la préparation</strong>, complémentaire au travail physique et technique que l’on fait au quotidien.</p><p>J’ai particulièrement apprécié <strong>son écoute, sa disponibilité et sa volonté de s’adapter à mes besoins du moment</strong>.<br>Même si notre collaboration a été assez courte, elle m’a permis de <strong>prendre du recul sur certains aspects mentaux liés à la performance sportive</strong>.<br>C’est une étape qui m’a aidé à <strong>mieux comprendre l’importance du mental dans la progression d’un athlète</strong> et j’en garde un bon souvenir.</p><h3>Palmarès</h3><ul><li><strong>Vice-champion du monde U23 2023</strong></li><li>Deuxième de la Coupe du Monde U23 2023</li><li>Médaille de bronze aux championnats d’Europe U23 2023</li><li>Champion de France time trial U23 2023</li><li>6ème aux championnats d’Europe élite 2024</li></ul>",
     "photo": "/images/temoignages/mateo.jpg"
+  },
+  {
+    "slug": "driss-mlahfi-sprinteur",
+    "nom": "Driss Mlahfi",
+    "sport": "Sprinteur",
+    "description": "description",
+    "quote": "Rester concentré dans les moments importants",
+    "contenu": "<p><strong>J’ai suivi un accompagnement d’environ 4-5 séances avec Benoît</strong> dans le cadre de ma préparation pour les qualifications des Jeux Paralympiques – Paris 2024.</p><p>Même si je n’ai finalement pas réussi à me qualifier, ce travail m’a beaucoup aidé.</p><p>J’ai particulièrement apprécié les exercices de respiration, qui m’ont permis de mieux gérer le stress et de rester concentré dans les moments importants.</p><p><strong>Ces séances m’ont aussi donné plus de confiance en mes capacités</strong>, ce qui me sert encore aujourd’hui dans ma pratique sportive et au-delà.</p>",
+    "photo": "/images/temoignages/driss.jpg"
   }
 ]
 

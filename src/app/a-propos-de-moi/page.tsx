@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Script from "next/script";
 import { ArrowDown, HeartHandshake, Leaf, Compass, Laugh } from "lucide-react";
+import ImageSequence from "@/components/ImageSequence"; // <-- ajout
 
 export const metadata = {
   metadataBase: new URL("https://benoitvasse.com"),
@@ -284,11 +285,15 @@ export default function AProposPage() {
         <div className="flex flex-col md:flex-row items-center gap-16">
           <div className="md:w-1/2">
             <div className="relative w-full min-h-[300px] aspect-[9/9] rounded-lg overflow-hidden shadow-xl">
-              <Image
-                src="/images/mix-gagnant.webp"
-                alt="Le MIX gagnant : communicant, coach professionnel et préparateur mental"
-                fill
-                className="object-cover"
+              <ImageSequence
+                images={[
+                  { src: "/images/benoit-vasse-prep-mentale-1.webp", alt: "Préparation mentale – étape 1" },
+                  { src: "/images/benoit-vasse-prep-mentale-2.webp", alt: "Préparation mentale – étape 2" },
+                  { src: "/images/benoit-vasse-prep-mentale-3.webp", alt: "Préparation mentale – étape 3" },
+                  { src: "/images/benoit-vasse-prep-mentale-4.webp", alt: "Préparation mentale – étape 4" },
+                ]}
+                interval={300} // ajuste la vitesse si besoin (en ms)
+                className="w-full h-full rounded-lg"
               />
             </div>
           </div>
