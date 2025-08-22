@@ -366,7 +366,7 @@ export default function AProposPage() {
             <h3 className="text-5xl font-serif font-extrabold mb-2">Une personnalité</h3>
             <p>
               <strong>Énergique</strong>, <strong>Enthousiaste</strong>, <strong>Généreux</strong> et{" "}
-              <strong>Exigent</strong>.
+              <strong>Exigeant</strong>.
             </p>
           </div>
 
