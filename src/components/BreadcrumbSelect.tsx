@@ -19,7 +19,7 @@ import {
 
 interface Temoin {
   slug: string;
-  nom: string;
+  sport: string;
 }
 
 export default function BreadcrumbSelect({ temoignages, currentSlug }: { temoignages: Temoin[], currentSlug: string }) {
@@ -51,7 +51,7 @@ export default function BreadcrumbSelect({ temoignages, currentSlug }: { temoign
             <SelectContent className="shadow-md border rounded-md">
               {temoignages.map((t) => (
                 <SelectItem key={t.slug} value={t.slug}>
-                  {t.nom}
+                  {t.sport}
                 </SelectItem>
               ))}
             </SelectContent>

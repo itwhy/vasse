@@ -24,7 +24,7 @@ export default async function SingleTemoignage(props: any) {
           <div className="sticky top-20">
             <Image
               src={temoin.photo}
-              alt={`Photo de ${temoin.nom}`}
+              alt={`Photo de ${temoin.sport}`}
               width={500}
               height={500}
               className="rounded-xl shadow-lg object-cover w-full h-auto"
@@ -34,10 +34,7 @@ export default async function SingleTemoignage(props: any) {
 
         {/* Colonne droite : contenu */}
         <div className="md:col-span-2">
-          <h1 className="text-5xl font-bold font-serif mb-4">{temoin.nom}</h1>
-          <p className="text-gray-500 mb-6">
-            {temoin.sport}
-          </p>
+          <h1 className="text-5xl font-bold font-serif mb-4">{temoin.sport}</h1>
           <blockquote className="italic font-serif text-2xl text-gray-800 mb-8">
             “{temoin.quote}”
           </blockquote>
